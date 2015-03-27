@@ -393,6 +393,7 @@
 				C0E320041AC5A3340046EDA0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C0E320051AC5A3340046EDA0 /* Build configuration list for PBXNativeTarget "simulator-installerTests" */ = {
 			isa = XCConfigurationList;
@@ -401,6 +402,7 @@
 				C0E320071AC5A3340046EDA0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
