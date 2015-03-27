@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  simulator-installer
-//
-//  Created by Stepan Hruda on 3/27/15.
-//  Copyright (c) 2015 ShopKeep. All rights reserved.
-//
-
 import Cocoa
 
 @NSApplicationMain
@@ -13,15 +5,26 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     @IBOutlet weak var window: NSWindow!
 
-
     func applicationDidFinishLaunching(aNotification: NSNotification) {
-        // Insert code here to initialize your application
+        let filePath = NSBundle.mainBundle().pathForResource("Register", ofType: "app")
+        
+        if let filePath = filePath {
+            let bundleIdentifier = "com.shopkeep.register"
+            
+            system("killall \"iOS Simulator\"")
+            system("xcrun simctl shutdown booted")
+            
+            system("xcrun instruments -w \"iPad Air\"")
+            
+            system("xcrun simctl install booted \"\(filePath)\"")
+            system("xcrun simctl launch booted \(bundleIdentifier)")
+        }
+        
+        NSApplication.sharedApplication().terminate(self)
     }
 
     func applicationWillTerminate(aNotification: NSNotification) {
-        // Insert code here to tear down your application
     }
-
 
 }
 
