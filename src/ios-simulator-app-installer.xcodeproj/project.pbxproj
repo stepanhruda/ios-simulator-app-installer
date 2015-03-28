@@ -1,0 +1,336 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C04632391AC70B1A00026FF8 /* Arguments.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04632321AC70B1A00026FF8 /* Arguments.swift */; };
+		C046323A1AC70B1A00026FF8 /* FunctionalAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04632341AC70B1A00026FF8 /* FunctionalAdditions.swift */; };
+		C046323B1AC70B1A00026FF8 /* ListDevices.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04632351AC70B1A00026FF8 /* ListDevices.swift */; };
+		C046323C1AC70B1A00026FF8 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04632361AC70B1A00026FF8 /* main.swift */; };
+		C046323D1AC70B1A00026FF8 /* Shell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04632371AC70B1A00026FF8 /* Shell.swift */; };
+		C046323E1AC70B1A00026FF8 /* StringToCChar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04632381AC70B1A00026FF8 /* StringToCChar.swift */; };
+		C06E31471AC7104B00D4190D /* Packaging.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06E31461AC7104B00D4190D /* Packaging.swift */; };
+		CDB2D56853F73774AAF56514 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 92E2D52A68C841EAC2D75E2C /* libPods.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C07EACC01AC6CD4200E5201D /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1542D4CCC50651202B413695 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		92E2D52A68C841EAC2D75E2C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C04632321AC70B1A00026FF8 /* Arguments.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Arguments.swift; sourceTree = SOURCE_ROOT; };
+		C04632331AC70B1A00026FF8 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
+		C04632341AC70B1A00026FF8 /* FunctionalAdditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunctionalAdditions.swift; sourceTree = SOURCE_ROOT; };
+		C04632351AC70B1A00026FF8 /* ListDevices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListDevices.swift; sourceTree = SOURCE_ROOT; };
+		C04632361AC70B1A00026FF8 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = SOURCE_ROOT; };
+		C04632371AC70B1A00026FF8 /* Shell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shell.swift; sourceTree = SOURCE_ROOT; };
+		C04632381AC70B1A00026FF8 /* StringToCChar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringToCChar.swift; sourceTree = SOURCE_ROOT; };
+		C06E31461AC7104B00D4190D /* Packaging.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Packaging.swift; sourceTree = SOURCE_ROOT; };
+		C07EACC21AC6CD4200E5201D /* ios-simulator-app-installer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "ios-simulator-app-installer"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9AE718AD317AE3C256CE9E8 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C07EACBF1AC6CD4200E5201D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDB2D56853F73774AAF56514 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1FC9911B5A753AC20283AD19 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E9AE718AD317AE3C256CE9E8 /* Pods.debug.xcconfig */,
+				1542D4CCC50651202B413695 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BDB8980EA8F4CDA2200605EC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				92E2D52A68C841EAC2D75E2C /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C07EACB91AC6CD4200E5201D = {
+			isa = PBXGroup;
+			children = (
+				C07EACC41AC6CD4200E5201D /* ios-simulator-app-installer */,
+				C07EACC31AC6CD4200E5201D /* Products */,
+				BDB8980EA8F4CDA2200605EC /* Frameworks */,
+				1FC9911B5A753AC20283AD19 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		C07EACC31AC6CD4200E5201D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C07EACC21AC6CD4200E5201D /* ios-simulator-app-installer */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C07EACC41AC6CD4200E5201D /* ios-simulator-app-installer */ = {
+			isa = PBXGroup;
+			children = (
+				C04632361AC70B1A00026FF8 /* main.swift */,
+				C04632321AC70B1A00026FF8 /* Arguments.swift */,
+				C04632341AC70B1A00026FF8 /* FunctionalAdditions.swift */,
+				C04632351AC70B1A00026FF8 /* ListDevices.swift */,
+				C06E31461AC7104B00D4190D /* Packaging.swift */,
+				C04632371AC70B1A00026FF8 /* Shell.swift */,
+				C04632381AC70B1A00026FF8 /* StringToCChar.swift */,
+				C04632331AC70B1A00026FF8 /* Bridging-Header.h */,
+			);
+			name = "ios-simulator-app-installer";
+			path = "simulator-installer-cli";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C07EACC11AC6CD4200E5201D /* ios-simulator-app-installer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C07EACC91AC6CD4200E5201D /* Build configuration list for PBXNativeTarget "ios-simulator-app-installer" */;
+			buildPhases = (
+				E7C92E65AEB93BF8BD8E6744 /* Check Pods Manifest.lock */,
+				C07EACBE1AC6CD4200E5201D /* Sources */,
+				C07EACBF1AC6CD4200E5201D /* Frameworks */,
+				C07EACC01AC6CD4200E5201D /* CopyFiles */,
+				4EDC3AF5C6256D7EA784792C /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ios-simulator-app-installer";
+			productName = "simulator-installer-cli";
+			productReference = C07EACC21AC6CD4200E5201D /* ios-simulator-app-installer */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C07EACBA1AC6CD4200E5201D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = ShopKeep;
+				TargetAttributes = {
+					C07EACC11AC6CD4200E5201D = {
+						CreatedOnToolsVersion = 6.2;
+					};
+				};
+			};
+			buildConfigurationList = C07EACBD1AC6CD4200E5201D /* Build configuration list for PBXProject "ios-simulator-app-installer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C07EACB91AC6CD4200E5201D;
+			productRefGroup = C07EACC31AC6CD4200E5201D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C07EACC11AC6CD4200E5201D /* ios-simulator-app-installer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4EDC3AF5C6256D7EA784792C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E7C92E65AEB93BF8BD8E6744 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C07EACBE1AC6CD4200E5201D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C06E31471AC7104B00D4190D /* Packaging.swift in Sources */,
+				C046323A1AC70B1A00026FF8 /* FunctionalAdditions.swift in Sources */,
+				C046323E1AC70B1A00026FF8 /* StringToCChar.swift in Sources */,
+				C046323B1AC70B1A00026FF8 /* ListDevices.swift in Sources */,
+				C046323D1AC70B1A00026FF8 /* Shell.swift in Sources */,
+				C046323C1AC70B1A00026FF8 /* main.swift in Sources */,
+				C04632391AC70B1A00026FF8 /* Arguments.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		C07EACC71AC6CD4200E5201D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx10.10;
+				SWIFT_OBJC_BRIDGING_HEADER = "Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C07EACC81AC6CD4200E5201D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx10.10;
+				SWIFT_OBJC_BRIDGING_HEADER = "Bridging-Header.h";
+			};
+			name = Release;
+		};
+		C07EACCA1AC6CD4200E5201D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E9AE718AD317AE3C256CE9E8 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "ios-simulator-app-installer";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C07EACCB1AC6CD4200E5201D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1542D4CCC50651202B413695 /* Pods.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "ios-simulator-app-installer";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C07EACBD1AC6CD4200E5201D /* Build configuration list for PBXProject "ios-simulator-app-installer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C07EACC71AC6CD4200E5201D /* Debug */,
+				C07EACC81AC6CD4200E5201D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C07EACC91AC6CD4200E5201D /* Build configuration list for PBXNativeTarget "ios-simulator-app-installer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C07EACCA1AC6CD4200E5201D /* Debug */,
+				C07EACCB1AC6CD4200E5201D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C07EACBA1AC6CD4200E5201D /* Project object */;
+}

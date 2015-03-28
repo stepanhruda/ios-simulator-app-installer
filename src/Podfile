@@ -1,0 +1,3 @@
+xcodeproj 'ios-simulator-app-installer'
+
+pod 'GBCli', :git => 'git@github.com:stepanhruda/GBCli'

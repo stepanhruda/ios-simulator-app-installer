@@ -1,0 +1,19 @@
+PODS:
+  - GBCli (1.1)
+
+DEPENDENCIES:
+  - GBCli (from `git@github.com:stepanhruda/GBCli`)
+
+EXTERNAL SOURCES:
+  GBCli:
+    :git: git@github.com:stepanhruda/GBCli
+
+CHECKOUT OPTIONS:
+  GBCli:
+    :commit: 62629b8a6278ae11a0b864095a68ce71909ad0a3
+    :git: git@github.com:stepanhruda/GBCli
+
+SPEC CHECKSUMS:
+  GBCli: e5f988fadb68e1e3c01919f134009fed9796fde0
+
+COCOAPODS: 0.36.1
