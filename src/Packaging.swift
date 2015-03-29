@@ -6,7 +6,7 @@ func packageApp(appPath: String, deviceIdentifier: String) {
     
     if let validPath = validPath {
         let share = "/usr/local/share/"
-        system("xcodebuild -project \(share)app-package-launcher/app-package-launcher.xcodeproj \"PACKAGED_APP=\(validPath)\" > /dev/null")
+        system("xcodebuild -project \(share)app-package-launcher/app-package-launcher.xcodeproj \"PACKAGED_APP=\(validPath)\" \"TARGET_DEVICE=\(deviceIdentifier)\" > /dev/null")
         system("rm -rf \"App Installer.app\"")
         system("mv \(share)app-package-launcher/build/Release/app-package-launcher.app \"App Installer.app\"")
         system("rm -rf \(share)app-package-launcher/build")

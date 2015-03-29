@@ -10,6 +10,8 @@
 		C00BFC071AC6451A00CE4F0B /* Packaged.app in Resources */ = {isa = PBXBuildFile; fileRef = C00BFC061AC6451A00CE4F0B /* Packaged.app */; };
 		C04632311AC70A6000026FF8 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = C046322E1AC70A5800026FF8 /* MainMenu.xib */; };
 		C06E31491AC72F3D00D4190D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C06E31481AC72F3D00D4190D /* Images.xcassets */; };
+		C081698D1AC82A8A002F6BBE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C081698C1AC82A8A002F6BBE /* Foundation.framework */; };
+		C08169911AC82C70002F6BBE /* TargetDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = C08169901AC82C70002F6BBE /* TargetDevice.m */; };
 		C0E31FEE1AC5A3340046EDA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E31FED1AC5A3340046EDA0 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
@@ -17,6 +19,10 @@
 		C00BFC061AC6451A00CE4F0B /* Packaged.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; path = Packaged.app; sourceTree = "<group>"; };
 		C046322F1AC70A5800026FF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		C06E31481AC72F3D00D4190D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		C07A81EC1AC827DD009C1EB6 /* TargetDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TargetDevice.h; sourceTree = "<group>"; };
+		C081698B1AC829FB002F6BBE /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		C081698C1AC82A8A002F6BBE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C08169901AC82C70002F6BBE /* TargetDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TargetDevice.m; sourceTree = "<group>"; };
 		C0E31FE81AC5A3340046EDA0 /* app-package-launcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "app-package-launcher.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0E31FEC1AC5A3340046EDA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C0E31FED1AC5A3340046EDA0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -27,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C081698D1AC82A8A002F6BBE /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,9 +45,13 @@
 			children = (
 				C00BFC061AC6451A00CE4F0B /* Packaged.app */,
 				C0E31FED1AC5A3340046EDA0 /* AppDelegate.swift */,
+				C07A81EC1AC827DD009C1EB6 /* TargetDevice.h */,
+				C08169901AC82C70002F6BBE /* TargetDevice.m */,
+				C081698B1AC829FB002F6BBE /* Bridging-Header.h */,
 				C046322E1AC70A5800026FF8 /* MainMenu.xib */,
 				C0E31FEC1AC5A3340046EDA0 /* Info.plist */,
 				C06E31481AC72F3D00D4190D /* Images.xcassets */,
+				C081698C1AC82A8A002F6BBE /* Foundation.framework */,
 				C0E31FE91AC5A3340046EDA0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -132,7 +143,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [ -d \"${PACKAGED_APP}\" ]; then\n    echo \"Copying specified ${PACKAGED_APP}.\"\n    cp -r ${PACKAGED_APP} ${SRCROOT}/Packaged.app\nelif [ -d \"${SRCROOT}/Packaged.app\" ]; then\n    echo \"Using Packaged.app present in the source root.\"\nelse\n    echo \"No Packaged.app specified\"\n    exit 1\nfi";
+			shellScript = "if [ -d \"${PACKAGED_APP}\" ]; then\n    echo \"Copying specified ${PACKAGED_APP}.\"\n    cp -r ${PACKAGED_APP} ${SRCROOT}/Packaged.app\nelif [ -d \"${SRCROOT}/Packaged.app\" ]; then\n    echo \"Using Packaged.app present in the source root.\"\nelse\n    echo \"Specify packaged app through PACKAGED_APP.\"\n    exit 10\nfi\n\nif [ \"${TARGET_DEVICE}\" == \"\" ]; then\n    echo \"Specify target device through TARGET_DEVICE.\"\n    exit 11\nfi\n";
 		};
 		C00BFC091AC6469000CE4F0B /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -154,6 +165,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C08169911AC82C70002F6BBE /* TargetDevice.m in Sources */,
 				C0E31FEE1AC5A3340046EDA0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -207,9 +219,9 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -244,8 +256,8 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -253,10 +265,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = "TARGET_DEVICE=\"${TARGET_DEVICE}\"";
 				INFOPLIST_FILE = Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -264,7 +279,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = "TARGET_DEVICE=\"${TARGET_DEVICE}\"";
 				INFOPLIST_FILE = Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
