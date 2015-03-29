@@ -1,4 +1,14 @@
-func linesContainingSimulator(lines: [String]) -> [String] {
+func printDevices() {
+    printSupportedInstrumentsConfigurations()
+        |> filterLinesContainingSimulator
+        |> printDeviceLines
+}
+
+func printSupportedInstrumentsConfigurations() -> [String] {
+    return run("xcrun instruments -s")
+}
+
+func filterLinesContainingSimulator(lines: [String]) -> [String] {
     return lines |> filteredWithPredicate {
         string in
         let nsstring = string as NSString
