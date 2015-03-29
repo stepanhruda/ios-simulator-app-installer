@@ -1,15 +1,27 @@
-public func flatMap<T, U>(f: T -> U?)(optional: T?) -> U? {
+public func map<A,B>(f: A -> B)(optional: A?) -> B? {
     switch optional {
     case .None: return .None
     case .Some(let value): return f(value)
     }
 }
 
-public func map<T, U>(f: T -> U)(optional: T?) -> U? {
+public func flatten<A>(optional: A??) -> A? {
     switch optional {
     case .None: return .None
-    case .Some(let value): return f(value)
+    case .Some(let value): return value
     }
+}
+
+public func bind<A,B>(f: A -> B?)(optional: A?) -> B? {
+    return flatten(map(f)(optional: optional))
+}
+
+public func compose<A,B,C>(g: B -> C)(f: A -> B)(a: A) -> C {
+    return g(f(a))
+}
+
+public func bindCompose<A,B,C>(g: B -> C?)(f: A -> B?)(optional: A?) -> C? {
+    return flatten(map(g)(optional: flatten(map(f)(optional: optional))))
 }
 
 public func filteredWithPredicate<S : SequenceType>
@@ -19,13 +31,23 @@ public func filteredWithPredicate<S : SequenceType>
         return filter(source, includeElement)
 }
 
-infix operator |>    { precedence 50 associativity left }
-infix operator >>=   { precedence 50 associativity left }
+infix operator |>    { associativity left precedence 150 }
+infix operator >>=   { associativity left precedence 150 }
+infix operator >+>   { associativity left precedence 150 }
+infix operator >=>   { associativity left precedence 150 }
 
-public func |> <T,U>(lhs: T, rhs: T -> U) -> U {
-    return rhs(lhs)
+public func |> <A,B>(lhs: @autoclosure() -> A, rhs: A -> B) -> B {
+    return rhs(lhs())
 }
 
-public func >>= <T,U>(lhs: T?, rhs: T -> U?) -> U? {
-    return flatMap(rhs)(optional: lhs)
+public func >>= <A,B>(lhs: A?, rhs: A -> B?) -> B? {
+    return bind(rhs)(optional: lhs)
+}
+
+public func >+> <A,B,C>(lhs: A -> B, rhs: B -> C) -> (A -> C) {
+    return compose(rhs)(lhs)
+}
+
+public func >=> <A,B,C>(lhs: A -> B?, rhs: B -> C?) -> (A -> C?) {
+    return bindCompose(rhs)(lhs)
 }
