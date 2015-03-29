@@ -5,12 +5,14 @@ func packageApp(appPath: String, deviceIdentifier: String) {
         |> flatMap(validateFileExistence)
     
     if let validPath = validPath {
-        system("xcodebuild -project app-package-launcher/app-package-launcher.xcodeproj \"PACKAGED_APP=\(validPath)\"")
-        system("mv app-package-launcher/build/Release/app-package-launcher.app \"App Installer.app\"")
-        system("rm -rf app-package-launcher/build")
-        println("App packaged to App Installer.app")
+        let share = "/usr/local/share/"
+        system("xcodebuild -project \(share)app-package-launcher/app-package-launcher.xcodeproj \"PACKAGED_APP=\(validPath)\" > /dev/null")
+        system("rm -rf \"App Installer.app\"")
+        system("mv \(share)app-package-launcher/build/Release/app-package-launcher.app \"App Installer.app\"")
+        system("rm -rf \(share)app-package-launcher/build")
+        println("App successfully packaged to \"App Installer.app\"")
     } else {
-        fatalError("Provided .app not found at \(appPath)")
+        println("Provided .app not found at \"\(appPath)\"")
     }
 }
 
