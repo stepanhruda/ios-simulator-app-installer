@@ -36,8 +36,8 @@ infix operator >>=   { associativity left precedence 150 }
 infix operator >+>   { associativity left precedence 150 }
 infix operator >=>   { associativity left precedence 150 }
 
-public func |> <A,B>(lhs: @autoclosure() -> A, rhs: A -> B) -> B {
-    return rhs(lhs())
+public func |> <A,B>(lhs: A, rhs: A -> B) -> B {
+    return rhs(lhs)
 }
 
 public func >>= <A,B>(lhs: A?, rhs: A -> B?) -> B? {
