@@ -8,17 +8,17 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(aNotification: NSNotification) {
         let filePath = NSBundle.mainBundle().pathForResource("Packaged", ofType: "app")
         
-        let simulator = "iPad Air"
-        
         if let filePath = filePath {
             let infoPlist = NSDictionary(contentsOfFile: filePath.stringByAppendingString("/Info.plist"))
             let bundleIdentifier = infoPlist?.objectForKey(kCFBundleIdentifierKey) as String
 
+            let targetDevice = TargetDevice.deviceString()
+            
             system("killall \"iOS Simulator\"")
 
             system("xcrun simctl shutdown booted")
             
-            system("xcrun instruments -w \"\(simulator)\"")
+            system("xcrun instruments -w \"\(targetDevice)\"")
             
             system("xcrun simctl install booted \"\(filePath)\"")
             system("xcrun simctl launch booted \(bundleIdentifier)")
