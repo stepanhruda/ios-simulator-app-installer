@@ -1,25 +1,39 @@
-func packageApp(appPath: String, deviceIdentifier: String) {
-    let validPath = appPath
+func packageApp(appPath: String, #deviceIdentifier: String, #outputPath: String?, #packageLauncherPath: String?, #fileManager: NSFileManager) {
+    let sourcePath = appPath
         |> getFullPath
-        >>= validateFileExistence(fileManager: NSFileManager.defaultManager())
+        >>= validateFileExistence(fileManager: fileManager)
     
-    if let validPath = validPath {
+    if let sourcePath = sourcePath {
         
-        let appName = (validPath
-            |> URL
-            >>= lastPathComponent
-            >=> deletePathExtension)! // There's a better way to do this than force unwrap
+        // TODO: Clean these two up in a functional way
+        var targetPath: String
+        if let outputPath = outputPath {
+            targetPath = outputPath
+        } else {
+            targetPath = defaultTargetPathForApp(sourcePath)
+        }
         
-        let share = "/usr/local/share/"
-        system("xcodebuild -project \(share)app-package-launcher/app-package-launcher.xcodeproj \"PACKAGED_APP=\(validPath)\" \"TARGET_DEVICE=\(deviceIdentifier)\" > /dev/null")
-        system("rm -rf \"\(appName) Installer.app\"")
-        system("mv \(share)app-package-launcher/build/Release/app-package-launcher.app \"\(appName) Installer.app\"")
-        system("rm -rf \(share)app-package-launcher/build")
+        var launcherPath: String
+        if let packageLauncherPath = packageLauncherPath {
+            launcherPath = packageLauncherPath
+        } else {
+            launcherPath =  "/usr/local/share/app-package-launcher"
+        }
         
-        println("\(appName) successfully packaged to \"\(appName) Installer.app\"")
+        let productFolder = "\(launcherPath)/build"
+        let productPath = "\(productFolder)/Release/app-package-launcher.app"
+        
+        system("xcodebuild -project \(launcherPath)/app-package-launcher.xcodeproj \"PACKAGED_APP=\(sourcePath)\" \"TARGET_DEVICE=\(deviceIdentifier)\" > /dev/null")
+        
+        fileManager.removeItemAtPath(targetPath, error: nil)
+        fileManager.moveItemAtPath(productPath, toPath: targetPath, error: nil)
+        fileManager.removeItemAtPath(productFolder, error: nil)
+        
+        println("\(appPath) successfully packaged to \(targetPath)")
+        
     } else {
         
-        println("Provided .app not found at \"\(appPath)\"")
+        println("Provided .app not found at \(appPath)")
         
     }
 }
@@ -42,4 +56,13 @@ func URL(path: String) -> NSURL? {
 
 func deletePathExtension(path: String) -> String? {
     return path.stringByDeletingPathExtension
+}
+
+func defaultTargetPathForApp(appPath: String) -> String {
+    let appName = (appPath
+        |> URL)! // I don't know how to handle this nicer without introducing bunch of new types, we know the URL cannot fail, though
+        |> lastPathComponent
+        >>= deletePathExtension
+    
+    return "\(appName) Installer.app"
 }

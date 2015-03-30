@@ -10,7 +10,11 @@ if arguments.displayHelp {
     
 } else if arguments.appPath != nil && arguments.deviceIdentifier != nil {
     
-    packageApp(arguments.appPath!, arguments.deviceIdentifier!) // TODO: Remove force unwrap with Swift 1.2 support
+    packageApp(arguments.appPath!,
+        deviceIdentifier: arguments.deviceIdentifier!,  // TODO: Remove force unwraps with Swift 1.2 support
+        outputPath: arguments.outputPath,
+        packageLauncherPath: arguments.packageLauncherPath,
+        fileManager: NSFileManager.defaultManager())
     
 } else {
     
