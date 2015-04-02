@@ -5,20 +5,8 @@ func packageApp(appPath: String, #deviceIdentifier: String, #outputPath: String?
     
     if let sourcePath = sourcePath {
         
-        // TODO: Clean these two up in a functional way
-        var targetPath: String
-        if let outputPath = outputPath {
-            targetPath = outputPath
-        } else {
-            targetPath = defaultTargetPathForApp(sourcePath)
-        }
-        
-        var launcherPath: String
-        if let packageLauncherPath = packageLauncherPath {
-            launcherPath = packageLauncherPath
-        } else {
-            launcherPath =  "/usr/local/share/app-package-launcher"
-        }
+        let targetPath = outputPath |> getOrElse(defaultTargetPathForApp(sourcePath))
+        let launcherPath = packageLauncherPath |> getOrElse("/usr/local/share/app-package-launcher")
         
         let productFolder = "\(launcherPath)/build"
         let productPath = "\(productFolder)/Release/app-package-launcher.app"
@@ -59,10 +47,10 @@ func deletePathExtension(path: String) -> String? {
 }
 
 func defaultTargetPathForApp(appPath: String) -> String {
-    let appName = (appPath
-        |> URL)! // I don't know how to handle this nicer without introducing bunch of new types, we know the URL cannot fail, though
-        |> lastPathComponent
-        >>= deletePathExtension
+    let appName = appPath
+        |> URL
+        >>= lastPathComponent
+        >=> deletePathExtension
     
-    return "\(appName) Installer.app"
+    return "\(appName!) Installer.app" // I don't know how to handle this nicer without introducing bunch of new types, we know the URL cannot fail, though
 }
