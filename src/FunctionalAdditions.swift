@@ -31,6 +31,13 @@ public func filteredWithPredicate<S : SequenceType>
         return filter(source, includeElement)
 }
 
+public func getOrElse<T>(fallbackValue: T)(firstChoice: T?) -> T {
+    switch firstChoice {
+    case .None: return fallbackValue
+    case .Some(let value): return value
+    }
+}
+
 infix operator |>    { associativity left precedence 150 }
 infix operator >>=   { associativity left precedence 150 }
 infix operator >+>   { associativity left precedence 150 }

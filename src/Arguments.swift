@@ -37,10 +37,10 @@ func parseArguments() -> (Arguments, GBOptionsHelper) {
     
     options.registerSeparator("NEW INSTALLER")
     options.registerOption("a".cChar(), long: AppFlag, description: ".app to be packaged", flags: .RequiredValue)
-    options.registerOption("d".cChar(), long: DeviceFlag, description: "identifier for device on which .app will be launched, you only need to provide device type e.g. \"iPhone 6\"", flags: .RequiredValue)
+    options.registerOption("d".cChar(), long: DeviceFlag, description: "identifier for device restriction/specification, will be matched with --list-devices on launch", flags: .RequiredValue)
     options.registerOption("o".cChar(), long: OutFlag, description: "output path for the created installer", flags: .RequiredValue)
     options.registerSeparator("DEVICES")
-    options.registerOption("l".cChar(), long: ListDevicesFlag, description: "list currently available device identifiers", flags: .NoValue)
+    options.registerOption("l".cChar(), long: ListDevicesFlag, description: "list currently available device identifiers, don't use UUIDs as they are machine-specific", flags: .NoValue)
     options.registerSeparator("HELP")
     options.registerOption("h".cChar(), long: HelpFlag, description: "print out this help", flags: .NoValue)
     options.registerOption("p".cChar(), long: PackageLauncherFlag, description: "use a path for app-package-launcher instead of the default in /usr/local/share", flags: .RequiredValue | .Invisible)

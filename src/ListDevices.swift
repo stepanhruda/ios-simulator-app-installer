@@ -1,10 +1,10 @@
 func printDevices() {
-    printSupportedInstrumentsConfigurations()
+    supportedInstrumentsConfigurations()
         |> filterLinesContainingSimulator
         |> printDeviceLines
 }
 
-func printSupportedInstrumentsConfigurations() -> [String] {
+func supportedInstrumentsConfigurations() -> [String] {
     return run("xcrun instruments -s")
 }
 
