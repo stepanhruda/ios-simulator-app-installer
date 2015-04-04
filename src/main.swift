@@ -8,10 +8,10 @@ if arguments.displayHelp {
     
     printDevices()
     
-} else if arguments.appPath != nil && arguments.deviceIdentifier != nil {
+} else if arguments.appPath != nil {
     
     packageApp(arguments.appPath!,
-        deviceIdentifier: arguments.deviceIdentifier!,  // TODO: Remove force unwraps with Swift 1.2 support
+        deviceIdentifier: arguments.deviceIdentifier,  // TODO: Remove force unwraps with Swift 1.2 support
         outputPath: arguments.outputPath,
         packageLauncherPath: arguments.packageLauncherPath,
         fileManager: NSFileManager.defaultManager())
