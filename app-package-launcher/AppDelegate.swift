@@ -4,71 +4,48 @@ import Cocoa
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-    var simulatorSelectionController: SimulatorSelectionWindowController?
-
     func applicationDidFinishLaunching(aNotification: NSNotification) {
-        let filePath = NSBundle.mainBundle().pathForResource("Packaged", ofType: "app")
-        
-        if let filePath = filePath {
-            let infoPlist = NSDictionary(contentsOfFile: filePath.stringByAppendingString("/Info.plist"))
-            let bundleIdentifier = infoPlist?.objectForKey(kCFBundleIdentifierKey) as String
-            let targetDevice = TargetDevice.deviceString()
-            let simulators = simulatorMatchingString(targetDevice)
+        let packagedApp = PackagedApp(filename: "Packaged")
+
+        switch packagedApp {
+        case .Some(let packagedApp):
+            
+            let simulatorIdentifierProvidedOnCompileTime = TargetDevice.deviceString()
+            let simulators = simulatorsMatchingIdentifier(simulatorIdentifierProvidedOnCompileTime)
 
             switch simulators.count {
+                
             case 1:
                 
-                installAndRunApp(filePath, bundleIdentifier: bundleIdentifier, device: targetDevice)
+                installAndRunApp(packagedApp, simulator: simulators.first!)
                 
             case _ where simulators.count > 1:
                 
                 letUserSelectSimulator(simulators) { selectedSimulator in
-                    installAndRunApp(filePath, bundleIdentifier: bundleIdentifier, device: selectedSimulator)
+                    installAndRunApp(packagedApp, simulator: selectedSimulator)
                 }
                 
             default:
                 
-                terminateWithError(noSuitableDeviceFoundForString(targetDevice))
+                terminateWithError(noSuitableDeviceFoundForStringError(simulatorIdentifierProvidedOnCompileTime))
                 
-            }
-        } else {
-            terminateWithError(appBundleNotFound())
+                }
+            
+        case .None:
+            
+            terminateWithError(appBundleNotFoundError())
+            
         }
     }
     
-    func letUserSelectSimulator(simulators: [String], completion: String -> Void) {
-        simulatorSelectionController = SimulatorSelectionWindowController.controller(simulators, onFinished: completion)
+    var simulatorSelectionController: SimulatorSelectionWindowController?
+    
+    func letUserSelectSimulator(simulators: [Simulator], completion: Simulator -> Void) {
+        simulatorSelectionController = SimulatorSelectionWindowController.controller(simulators) {
+            [unowned self] selectedSimulator in
+            completion(selectedSimulator)
+            self.simulatorSelectionController = nil
+        }
         simulatorSelectionController?.showWindow(nil)
     }
 }
-
-public func cleanUpDirtyState() {
-    system("killall \"iOS Simulator\"")
-    system("xcrun simctl shutdown booted")
-}
-
-public func simulatorMatchingString(string: String) -> [String] {
-    return run("xcrun instruments -s")
-        |> filteredWithPredicate { ($0 as NSString).containsString(string) }
-        |> map(truncateUuid)
-}
-
-public func truncateUuid(string: String) -> String {
-    let index = advance(string.endIndex, -38)
-    return string.substringToIndex(index)
-}
-
-public func installAndRunApp(appPath: String, #bundleIdentifier: String, #device: String) {
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
-        cleanUpDirtyState()
-        
-        system("xcrun instruments -w \"\(device)\"")
-        
-        system("xcrun simctl install booted \"\(appPath)\"")
-        system("xcrun simctl launch booted \(bundleIdentifier)")
-        
-        NSApplication.sharedApplication().terminate(nil)
-    }
-}
-
-
