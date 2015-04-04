@@ -3,8 +3,13 @@ func packageApp(appPath: String, #deviceIdentifier: String, #outputPath: String?
         |> getFullPath
         >>= validateFileExistence(fileManager: fileManager)
     
-    if let sourcePath = sourcePath {
-        
+    // TODO: Result<T,E> would be better for error handling.
+    switch (isRequiredXcodeIsInstalled(), sourcePath) {
+    case (false, _):
+        println("You need to have \(RequiredXcodeVersion) installed and selected via xcode-select.")
+    case (_, .None):
+        println("Provided .app not found at \(appPath)")
+    case (true, .Some(let sourcePath)):
         let targetPath = outputPath |> getOrElse(defaultTargetPathForApp(sourcePath))
         let launcherPath = packageLauncherPath |> getOrElse("/usr/local/share/app-package-launcher")
         
@@ -18,11 +23,8 @@ func packageApp(appPath: String, #deviceIdentifier: String, #outputPath: String?
         fileManager.removeItemAtPath(productFolder, error: nil)
         
         println("\(appPath) successfully packaged to \(targetPath)")
-        
-    } else {
-        
-        println("Provided .app not found at \(appPath)")
-        
+    default:
+        fatalError("How did we get here?")
     }
 }
 
