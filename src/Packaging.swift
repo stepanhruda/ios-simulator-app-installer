@@ -1,4 +1,4 @@
-func packageApp(appPath: String, #deviceIdentifier: String, #outputPath: String?, #packageLauncherPath: String?, #fileManager: NSFileManager) {
+func packageApp(appPath: String, #deviceIdentifier: String?, #outputPath: String?, #packageLauncherPath: String?, #fileManager: NSFileManager) {
     let sourcePath = appPath
         |> getFullPath
         >>= validateFileExistence(fileManager: fileManager)
@@ -6,7 +6,7 @@ func packageApp(appPath: String, #deviceIdentifier: String, #outputPath: String?
     // TODO: Result<T,E> would be better for error handling.
     switch (isRequiredXcodeIsInstalled(), sourcePath) {
     case (false, _):
-        println("You need to have \(RequiredXcodeVersion) installed and selected via xcode-select.")
+        println("You need to have \(RequiredXcodeVersion) installed.")
     case (_, .None):
         println("Provided .app not found at \(appPath)")
     case (true, .Some(let sourcePath)):
@@ -15,8 +15,10 @@ func packageApp(appPath: String, #deviceIdentifier: String, #outputPath: String?
         
         let productFolder = "\(launcherPath)/build"
         let productPath = "\(productFolder)/Release/app-package-launcher.app"
+        let packagedAppFlag = "\"PACKAGED_APP=\(sourcePath)\""
+        let targetDeviceFlag = targetDeviceFlagForDeviceIdentifier(deviceIdentifier)
         
-        system("xcodebuild -project \(launcherPath)/app-package-launcher.xcodeproj \"PACKAGED_APP=\(sourcePath)\" \"TARGET_DEVICE=\(deviceIdentifier)\" > /dev/null")
+        system("xcodebuild -project \(launcherPath)/app-package-launcher.xcodeproj \(packagedAppFlag) \(targetDeviceFlag) > /dev/null")
         
         fileManager.removeItemAtPath(targetPath, error: nil)
         fileManager.moveItemAtPath(productPath, toPath: targetPath, error: nil)
@@ -55,4 +57,14 @@ func defaultTargetPathForApp(appPath: String) -> String {
         >=> deletePathExtension
     
     return "\(appName!) Installer.app" // I don't know how to handle this nicer without introducing bunch of new types, we know the URL cannot fail, though
+}
+
+func targetDeviceFlagForDeviceIdentifier(deviceIdentifier: String?) -> String {
+    var result: String
+    if let deviceIdentifier = deviceIdentifier {
+        result = "\"TARGET_DEVICE=\(deviceIdentifier)\""
+    } else {
+        result = ""
+    }
+    return result
 }
