@@ -5,6 +5,10 @@ public func map<A,B>(f: A -> B)(optional: A?) -> B? {
     }
 }
 
+public func map<A,B>(f: A -> B)(source: [A]) -> [B] {
+    return map(source, f)
+}
+
 public func flatten<A>(optional: A??) -> A? {
     switch optional {
     case .None: return .None
@@ -29,6 +33,10 @@ public func filteredWithPredicate<S : SequenceType>
     (source: S)
     -> [S.Generator.Element] {
         return filter(source, includeElement)
+}
+
+public func sorted<C : SequenceType>(isOrderedBefore: (C.Generator.Element, C.Generator.Element) -> Bool)(source: C) -> [C.Generator.Element] {
+    return sorted(source, isOrderedBefore)
 }
 
 public func getOrElse<T>(fallbackValue: T)(firstChoice: T?) -> T {

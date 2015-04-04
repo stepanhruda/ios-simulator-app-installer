@@ -1,7 +1,9 @@
 func printDevices() {
     supportedInstrumentsConfigurations()
         |> filterLinesContainingSimulator
-        |> printDeviceLines
+        |> map(truncateUuid)
+        |> sorted { $0 > $1 }
+        |> map(println)
 }
 
 func supportedInstrumentsConfigurations() -> [String] {
@@ -16,12 +18,7 @@ func filterLinesContainingSimulator(lines: [String]) -> [String] {
     }
 }
 
-func printDeviceLines(devices: [String]) {
-    if devices.count > 0 {
-        for line in devices {
-            println(line)
-        }
-    } else {
-        println("No devices found.")
-    }
+func truncateUuid(string: String) -> String {
+    let index = advance(string.endIndex, -38)
+    return string.substringToIndex(index)
 }

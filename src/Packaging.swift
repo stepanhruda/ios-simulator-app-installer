@@ -6,7 +6,7 @@ func packageApp(appPath: String, #deviceIdentifier: String?, #outputPath: String
     // TODO: Result<T,E> would be better for error handling.
     switch (isRequiredXcodeIsInstalled(), sourcePath) {
     case (false, _):
-        println("You need to have \(RequiredXcodeVersion) installed.")
+        println("You need to have \(RequiredXcodeVersion) installed and selected via xcode-select.")
     case (_, .None):
         println("Provided .app not found at \(appPath)")
     case (true, .Some(let sourcePath)):
@@ -56,15 +56,12 @@ func defaultTargetPathForApp(appPath: String) -> String {
         >>= lastPathComponent
         >=> deletePathExtension
     
-    return "\(appName!) Installer.app" // I don't know how to handle this nicer without introducing bunch of new types, we know the URL cannot fail, though
+    return "\(appName!) Installer.app" // TODO: Wrap this in a type because the force unwrap is evil.
 }
 
 func targetDeviceFlagForDeviceIdentifier(deviceIdentifier: String?) -> String {
-    var result: String
-    if let deviceIdentifier = deviceIdentifier {
-        result = "\"TARGET_DEVICE=\(deviceIdentifier)\""
-    } else {
-        result = ""
+    switch deviceIdentifier {
+    case .Some(let deviceIdentifier): return "\"TARGET_DEVICE=\(deviceIdentifier)\""
+    case .None: return ""
     }
-    return result
 }

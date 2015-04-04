@@ -35,6 +35,10 @@ public func filteredWithPredicate<S : SequenceType>
         return filter(source, includeElement)
 }
 
+public func sorted<C : SequenceType>(isOrderedBefore: (C.Generator.Element, C.Generator.Element) -> Bool)(source: C) -> [C.Generator.Element] {
+    return sorted(source, isOrderedBefore)
+}
+
 public func getOrElse<T>(fallbackValue: T)(firstChoice: T?) -> T {
     switch firstChoice {
     case .None: return fallbackValue

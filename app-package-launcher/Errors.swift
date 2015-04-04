@@ -3,14 +3,14 @@ import Foundation
 
 let ErrorDomain = "com.stepanhruda.ios-simulator-app-installer"
 
-public func appBundleNotFound() -> NSError {
+public func appBundleNotFoundError() -> NSError {
     return  NSError(
         domain: ErrorDomain,
         code: 1,
         userInfo: [NSLocalizedDescriptionKey as NSString: "App bundle couldn't be found, this installer was packaged incorrectly."])
 }
 
-public func noSuitableDeviceFoundForString(targetDevice: String) -> NSError {
+public func noSuitableDeviceFoundForStringError(targetDevice: String) -> NSError {
     return  NSError(
         domain: ErrorDomain,
         code: 2,
