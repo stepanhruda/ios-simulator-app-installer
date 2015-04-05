@@ -1,12 +1,13 @@
 > Create an OS X app that installs your iOS app into iOS Simulator.
 
-(command line gif)
+![terminal](https://cloud.githubusercontent.com/assets/2835783/6998316/aa655f38-dbaa-11e4-99ed-034044a38602.gif)
 
-(GIF of double clicking an app and the simulator being launched)
+<img src="https://cloud.githubusercontent.com/assets/2835783/6998386/a7193ba6-dbaf-11e4-8b2d-de5c79bab5e6.gif" alt="installer" width="460" height="602">
 
-Select a device when creating app installer, or on launch time.
 
-(screenshot of UI to select simulator)
+> Select a device when creating app installer, or on launch time.
+
+<img src="https://cloud.githubusercontent.com/assets/2835783/6998400/33c3fd52-dbb0-11e4-8ea2-57d1599843ba.png" alt="select-simulator" width="496" height="233">
 
 ## Why use it?
 
