@@ -1,11 +1,8 @@
 > Create an OS X app that installs your iOS app into iOS Simulator.
 
-![terminal](https://cloud.githubusercontent.com/assets/2835783/6998316/aa655f38-dbaa-11e4-99ed-034044a38602.gif)
-
 <img src="https://cloud.githubusercontent.com/assets/2835783/6998386/a7193ba6-dbaf-11e4-8b2d-de5c79bab5e6.gif" alt="installer" width="460" height="602">
 
-
-> Select a device when creating app installer, or on launch time.
+> Choose a simulator device on launch time, or when creating the installer.
 
 <img src="https://cloud.githubusercontent.com/assets/2835783/6998400/33c3fd52-dbb0-11e4-8ea2-57d1599843ba.png" alt="select-simulator" width="496" height="233">
 
@@ -32,7 +29,7 @@ Latest stable version of Xcode and OS X Yosemite are required.
 
 __Example:__ `ios-simulator-app-installer --app "Rocket Science.app" --device "iPhone"`
 
-* `--app`:
+* `--app`
 
 An app out of which the installer app is created. The easiest way to get a .app is by compiling your project using _xcodebuild_ and looking in _DerivedData/Build/Products/Debug-iphonesimulator_:
 
@@ -42,21 +39,21 @@ xcodebuild -workspace RocketScience.xcworkspace -scheme RocketScience -configura
 ios-simulator-app-installer --app "build/DerivedData/Build/Products/Debug-iphonesimulator/Rocket Science.app"
 ```
 
-* `--device`:
+* `--device`
 
 Restricts installing the app to certain simulators. Keep in mind these might not be available on someone else's machine or over time. If multiple devices match the string, the user shall select one.
 
 A nice restriction example is `--device iPhone` or `--device iPad`. You can print your machine's currently available simulators via `--list-devices`.
 
-* `--out`:
+* `--out`
 
 Output path where your installer shall be created. Default is _YourApp Installer.app_.
 
-* `--list-devices`:
+* `--list-devices`
 
 Lists out simulator identifiers available on your current machine.
 
-* `--help`:
+* `--help`
 
 In case you get lost.
 
