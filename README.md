@@ -2,10 +2,6 @@
 
 <img src="https://cloud.githubusercontent.com/assets/2835783/6998386/a7193ba6-dbaf-11e4-8b2d-de5c79bab5e6.gif" alt="installer" width="460" height="602">
 
-> Choose a simulator device on launch time, or when creating the installer.
-
-<img src="https://cloud.githubusercontent.com/assets/2835783/6998400/33c3fd52-dbb0-11e4-8ea2-57d1599843ba.png" alt="select-simulator" width="496" height="233">
-
 ## Why use it?
 
 * Install older builds without having to _git checkout_ and recompile everything
