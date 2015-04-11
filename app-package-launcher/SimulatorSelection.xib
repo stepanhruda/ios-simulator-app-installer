@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6751"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="7531"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="SimulatorSelectionWindowController" customModule="app_package_launcher" customModuleProvider="target">
@@ -14,14 +14,14 @@
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <window title="Select Simulator" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="8YB-Iw-gjb">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" fullSizeContentView="YES"/>
-            <rect key="contentRect" x="75" y="103" width="384" height="120"/>
+            <rect key="contentRect" x="75" y="103" width="360" height="120"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1280" height="777"/>
             <view key="contentView" focusRingType="none" id="Bt3-hH-6IR">
-                <rect key="frame" x="0.0" y="0.0" width="384" height="120"/>
+                <rect key="frame" x="0.0" y="0.0" width="360" height="120"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="fJD-v0-ccs">
-                        <rect key="frame" x="18" y="56" width="349" height="26"/>
+                        <rect key="frame" x="18" y="56" width="333" height="26"/>
                         <popUpButtonCell key="cell" type="push" title="Simulator Selection" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" preferredEdge="maxY" selectedItem="SGd-ei-d85" id="iZG-iH-O9W">
                             <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="menu"/>
@@ -35,8 +35,8 @@
                         </popUpButtonCell>
                     </popUpButton>
                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dBQ-Q1-Hv0">
-                        <rect key="frame" x="258" y="14" width="106" height="25"/>
-                        <buttonCell key="cell" type="roundTextured" title="Launch" bezelStyle="texturedRounded" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="38x-pa-WC6">
+                        <rect key="frame" x="244" y="7" width="110" height="32"/>
+                        <buttonCell key="cell" type="push" title="Launch" bezelStyle="rounded" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="38x-pa-WC6">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
@@ -45,11 +45,11 @@
                         </connections>
                     </button>
                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="LSE-iH-SrZ">
-                        <rect key="frame" x="139" y="14" width="106" height="25"/>
+                        <rect key="frame" x="133" y="7" width="110" height="32"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="106" id="OEE-zF-Xq3"/>
+                            <constraint firstAttribute="width" constant="98" id="OEE-zF-Xq3"/>
                         </constraints>
-                        <buttonCell key="cell" type="roundTextured" title="Cancel" bezelStyle="texturedRounded" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="K3B-o6-oOq">
+                        <buttonCell key="cell" type="push" title="Cancel" bezelStyle="rounded" alignment="center" state="on" borderStyle="border" inset="2" id="K3B-o6-oOq">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
@@ -60,13 +60,13 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="dBQ-Q1-Hv0" firstAttribute="baseline" secondItem="LSE-iH-SrZ" secondAttribute="baseline" id="0af-8W-2Kk"/>
-                    <constraint firstAttribute="trailing" secondItem="fJD-v0-ccs" secondAttribute="trailing" constant="20" symbolic="YES" id="1HK-6N-Qt7"/>
+                    <constraint firstAttribute="trailing" secondItem="fJD-v0-ccs" secondAttribute="trailing" constant="12" id="1HK-6N-Qt7"/>
                     <constraint firstItem="dBQ-Q1-Hv0" firstAttribute="leading" secondItem="LSE-iH-SrZ" secondAttribute="trailing" constant="13" id="GFU-UQ-SJF"/>
                     <constraint firstItem="fJD-v0-ccs" firstAttribute="leading" secondItem="Bt3-hH-6IR" secondAttribute="leading" constant="20" symbolic="YES" id="bQ9-h1-D5P"/>
-                    <constraint firstItem="LSE-iH-SrZ" firstAttribute="top" secondItem="fJD-v0-ccs" secondAttribute="bottom" constant="21" id="cW0-zt-HiF"/>
+                    <constraint firstItem="LSE-iH-SrZ" firstAttribute="top" secondItem="fJD-v0-ccs" secondAttribute="bottom" constant="24" id="cW0-zt-HiF"/>
                     <constraint firstItem="dBQ-Q1-Hv0" firstAttribute="trailing" secondItem="fJD-v0-ccs" secondAttribute="trailing" id="cxd-vd-esD"/>
                     <constraint firstItem="fJD-v0-ccs" firstAttribute="top" secondItem="Bt3-hH-6IR" secondAttribute="top" constant="40" id="eSA-AQ-Eq9"/>
-                    <constraint firstItem="fJD-v0-ccs" firstAttribute="centerX" secondItem="LSE-iH-SrZ" secondAttribute="centerX" id="spV-OA-mO2"/>
+                    <constraint firstItem="fJD-v0-ccs" firstAttribute="centerX" secondItem="LSE-iH-SrZ" secondAttribute="centerX" constant="-4" id="spV-OA-mO2"/>
                 </constraints>
             </view>
             <point key="canvasLocation" x="190" y="365"/>
