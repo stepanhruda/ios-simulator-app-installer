@@ -14,7 +14,7 @@ func simulatorsMatchingIdentifier(identifier: String) -> [Simulator] {
 }
 
 func matchesIdentifier(identifier: String)(simulator: Simulator) -> Bool {
-    switch countElements(identifier) {
+    switch count(identifier) {
     case 0: return true
     default: return (simulator.identifierString as NSString).containsString(identifier)
     }
