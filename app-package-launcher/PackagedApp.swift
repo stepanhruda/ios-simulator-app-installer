@@ -12,7 +12,7 @@ struct PackagedApp {
     var bundleIdentifier: String {
         get {
             let infoPlist = NSDictionary(contentsOfFile: path.stringByAppendingString("/Info.plist"))
-            return infoPlist?.objectForKey(kCFBundleIdentifierKey) as String
+            return infoPlist?.objectForKey(kCFBundleIdentifierKey) as! String
         }
     }
     

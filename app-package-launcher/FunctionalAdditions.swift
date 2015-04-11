@@ -39,13 +39,6 @@ public func sorted<C : SequenceType>(isOrderedBefore: (C.Generator.Element, C.Ge
     return sorted(source, isOrderedBefore)
 }
 
-public func getOrElse<T>(fallbackValue: T)(firstChoice: T?) -> T {
-    switch firstChoice {
-    case .None: return fallbackValue
-    case .Some(let value): return value
-    }
-}
-
 infix operator |>    { associativity left precedence 150 }
 infix operator >>=   { associativity left precedence 150 }
 infix operator >+>   { associativity left precedence 150 }
@@ -60,9 +53,9 @@ public func >>= <A,B>(lhs: A?, rhs: A -> B?) -> B? {
 }
 
 public func >+> <A,B,C>(lhs: A -> B, rhs: B -> C) -> (A -> C) {
-    return compose(rhs)(lhs)
+    return compose(rhs)(f: lhs)
 }
 
 public func >=> <A,B,C>(lhs: A -> B?, rhs: B -> C?) -> (A -> C?) {
-    return bindCompose(rhs)(lhs)
+    return { bindCompose(rhs)(f: lhs)(optional: $0) }
 }

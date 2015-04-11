@@ -16,5 +16,5 @@ func run(command: String) -> [String] {
     
     let outputData = file.readDataToEndOfFile()
     let outputString = NSString(data: outputData, encoding: NSUTF8StringEncoding)
-    return outputString?.componentsSeparatedByString("\n") as [String]!
+    return outputString?.componentsSeparatedByString("\n") as! [String]
 }

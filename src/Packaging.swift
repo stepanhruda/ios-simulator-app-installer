@@ -10,21 +10,40 @@ func packageApp(appPath: String, #deviceIdentifier: String?, #outputPath: String
     case (_, .None):
         println("Provided .app not found at \(appPath)")
     case (true, .Some(let sourcePath)):
-        let targetPath = outputPath |> getOrElse(defaultTargetPathForApp(sourcePath))
-        let launcherPath = packageLauncherPath |> getOrElse("/usr/local/share/app-package-launcher")
+        
+        var targetPath: String
+        switch outputPath {
+        case .Some(let value): targetPath = value
+        case .None: targetPath = defaultTargetPathForApp(sourcePath)
+        }
+        
+        var launcherPath: String
+        switch packageLauncherPath {
+        case .Some(let value): launcherPath = value
+        case .None: launcherPath = "/usr/local/share/app-package-launcher"
+        }
         
         let productFolder = "\(launcherPath)/build"
         let productPath = "\(productFolder)/Release/app-package-launcher.app"
         let packagedAppFlag = "\"PACKAGED_APP=\(sourcePath)\""
         let targetDeviceFlag = targetDeviceFlagForDeviceIdentifier(deviceIdentifier)
         
+        let exitCode =
         system("xcodebuild -project \(launcherPath)/app-package-launcher.xcodeproj \(packagedAppFlag) \(targetDeviceFlag) > /dev/null")
         
-        fileManager.removeItemAtPath(targetPath, error: nil)
-        fileManager.moveItemAtPath(productPath, toPath: targetPath, error: nil)
-        fileManager.removeItemAtPath(productFolder, error: nil)
-        
-        println("\(appPath) successfully packaged to \(targetPath)")
+        switch exitCode {
+
+        case 0:
+            println("\(appPath) successfully packaged to \(targetPath)")
+            fileManager.removeItemAtPath(targetPath, error: nil)
+            fileManager.moveItemAtPath(productPath, toPath: targetPath, error: nil)
+            fileManager.removeItemAtPath(productFolder, error: nil)
+            
+        default:
+            println("An error occurred when packaging \(appPath)")
+            
+        }
+
     default:
         fatalError("How did we get here?")
     }
