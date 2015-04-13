@@ -1,6 +1,14 @@
-> Create an OS X app that installs your iOS app into iOS Simulator.
+__ios-simulator-app-installer__ is a command-line tool to create an OS X app with your iOS Simulator app packaged in.
 
-<img src="https://cloud.githubusercontent.com/assets/2835783/6998386/a7193ba6-dbaf-11e4-8b2d-de5c79bab5e6.gif" alt="installer" width="460" height="602">
+<img src="https://cloud.githubusercontent.com/assets/2835783/7115770/8b984222-e1b9-11e4-9eec-70a6ae16260d.png" width="124" height="135">
+
+When you open it, it launches iOS Simulator and installs the packaged iOS app.
+
+---
+
+You can filter devices when building the package, or let the user select a device when installing the app.
+
+<img src="https://cloud.githubusercontent.com/assets/2835783/7115847/316417a8-e1ba-11e4-9c17-b632583cf404.png" width="472" height="233">
 
 ## Why use it?
 
