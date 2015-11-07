@@ -20,12 +20,9 @@ struct Simulator {
 
 extension CollectionType where Generator.Element == String {
     func filterSimulators() -> [String] {
-        return filter { naiveSimulatorFilterStrings.contains($0) }
+        return filter { $0.containsString("iPhone") || $0.containsString("iPad") }
     }
 }
-
-private let naiveSimulatorFilterStrings = ["iPhone", "iPad"]
-
 
 extension String {
     func truncateUuid() -> String {

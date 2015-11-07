@@ -7,7 +7,7 @@ if arguments.displayHelp {
     
 } else if arguments.listDevices {
     
-    Simulator.allSimulators().forEach { print($0) }
+    Simulator.allSimulators().forEach { print($0.identifierString) }
     
 } else if let appPath = arguments.appPath {
 
