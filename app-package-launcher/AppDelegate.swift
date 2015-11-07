@@ -4,48 +4,57 @@ import Cocoa
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-    func applicationDidFinishLaunching(aNotification: NSNotification) {
-        let packagedApp = PackagedApp(filename: "Packaged")
+    func applicationDidFinishLaunching(notification: NSNotification) {
+        do {
+            let packagedApp = try PackagedApp(bundleName: "Packaged")
 
-        switch packagedApp {
-        case .Some(let packagedApp):
-            
             let simulatorIdentifierProvidedOnCompileTime = TargetDevice.deviceString()
-            let simulators = simulatorsMatchingIdentifier(simulatorIdentifierProvidedOnCompileTime)
+            let simulators = Simulator.simulatorsMatchingIdentifier(simulatorIdentifierProvidedOnCompileTime)
 
             switch simulators.count {
-                
+
             case 1:
-                
-                installAndRunApp(packagedApp, simulator: simulators.first!)
-                
+
+                Installer.installAndRunApp(packagedApp, simulator: simulators.first!)
+
             case _ where simulators.count > 1:
-                
-                letUserSelectSimulator(simulators) { selectedSimulator in
-                    installAndRunApp(packagedApp, simulator: selectedSimulator)
+
+                letUserSelectSimulatorFrom(simulators) { selectedSimulator in
+                    Installer.installAndRunApp(packagedApp, simulator: selectedSimulator)
                 }
-                
+
             default:
-                
+
                 terminateWithError(noSuitableDeviceFoundForStringError(simulatorIdentifierProvidedOnCompileTime))
-                
-                }
-            
-        case .None:
-            
-            terminateWithError(appBundleNotFoundError())
-            
+            }
+        }
+        catch let error as PackagedAppError {
+            terminateWithError(error.asNSError)
+        } catch {
+            fatalError("error handling failure")
         }
     }
     
     var simulatorSelectionController: SimulatorSelectionWindowController?
-    
-    func letUserSelectSimulator(simulators: [Simulator], completion: Simulator -> Void) {
+
+    func letUserSelectSimulatorFrom(simulators: [Simulator], completion: Simulator -> Void) {
         simulatorSelectionController = SimulatorSelectionWindowController.controller(simulators) {
             [unowned self] selectedSimulator in
             completion(selectedSimulator)
             self.simulatorSelectionController = nil
         }
         simulatorSelectionController?.showWindow(nil)
+    }
+
+    func terminateWithError(error: NSError) {
+        NSAlert(error: error).runModal()
+        NSApplication.sharedApplication().terminate(nil)
+    }
+
+    func noSuitableDeviceFoundForStringError(targetDevice: String) -> NSError {
+        return  NSError(
+            domain: "com.stepanhruda.ios-simulator-app-installer",
+            code: 2,
+            userInfo: [NSLocalizedDescriptionKey as NSString: "No simulator matching \"\(targetDevice)\" was found."])
     }
 }

@@ -5,7 +5,7 @@ class SimulatorSelectionWindowController: NSWindowController {
     
     @IBOutlet weak var selectionPopUpButton: NSPopUpButton!
     
-    var onSelected: (Simulator -> Void)?
+    var onSelected: (Simulator -> Void)!
     var simulators: [Simulator]!
     
     class func controller(simulators: [Simulator], onSelected: Simulator -> Void) -> SimulatorSelectionWindowController {
@@ -16,7 +16,7 @@ class SimulatorSelectionWindowController: NSWindowController {
     }
     
     override func windowDidLoad() {
-        let titles = map(simulators) { $0.identifierString }
+        let titles = simulators.map { $0.identifierString }
         
         selectionPopUpButton.removeAllItems()
         selectionPopUpButton.menu = NSMenu(title: "Simulators")
@@ -25,7 +25,7 @@ class SimulatorSelectionWindowController: NSWindowController {
     
     @IBAction func launchTapped(sender: NSButton) {
         close()
-        onSelected?(simulators[selectionPopUpButton.indexOfSelectedItem])
+        onSelected(simulators[selectionPopUpButton.indexOfSelectedItem])
     }
     
     @IBAction func cancelTapped(sender: NSButton) {

@@ -7,305 +7,303 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		05914019B85269D63BBF6FEB /* GBCli.h in Headers */ = {isa = PBXBuildFile; fileRef = F36E121763423CCCAE0AB721 /* GBCli.h */; };
-		3CABCAFE9FF26B5ECA1539F6 /* GBCommandLineParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A25C7B54B19E36B72557D7E /* GBCommandLineParser.m */; };
-		3CD669257A648EAE7D21476F /* Pods-GBCli-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CC2FEB738ABEDA66B82F30E1 /* Pods-GBCli-dummy.m */; };
-		3EFE56D03C563C1F92F53424 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4606F11A15F64E06B3BF60F3 /* Cocoa.framework */; };
-		5612125423E2E1CBD5389AA7 /* GBPrint.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F16919C55C9557035A990A0 /* GBPrint.m */; };
-		6AC3FF010F33D6DC84EABF81 /* GBOptionsHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 488C5BC8736562F6A1CA68E7 /* GBOptionsHelper.m */; };
-		76D0BC98741854E4E36DC2FF /* GBSettings.h in Headers */ = {isa = PBXBuildFile; fileRef = 66800E6CB3FCDD52A8B1C442 /* GBSettings.h */; };
-		7965C0909CB05EB98DE879C3 /* GBCommandLineParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D9FF5AF895BC97B14E79CBE /* GBCommandLineParser.h */; };
-		A12AA0B6EA655976FF0B14E6 /* GBPrint.h in Headers */ = {isa = PBXBuildFile; fileRef = 19027338E883306E3F161502 /* GBPrint.h */; };
-		B35CC18EE20EB4E4F823C95A /* GBSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 80243A2175F82CCD1790CC72 /* GBSettings.m */; };
-		B53632F012A2D125FFF8FF1D /* GBOptionsHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 680987F227333D6354A979C7 /* GBOptionsHelper.h */; };
-		F2976271F11625F1FD432FA7 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4606F11A15F64E06B3BF60F3 /* Cocoa.framework */; };
-		FE5B155B8F6F3B6444697EDC /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6540CBF7465959D48D8741AD /* Pods-dummy.m */; };
+		0A2942B7DCD5532F76BD9E235F45AD12 /* GBCommandLineParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 2678127996C0E4AE077F3297F9FC2D3E /* GBCommandLineParser.m */; };
+		1FF70489F55F1CF71F25B7953C402E37 /* GBCommandLineParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 0997AF5C5FE48DE99D8B0BEA59124130 /* GBCommandLineParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5534B244492E0DD3AB9E1D8168EB5AE7 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CA6EBC2E57D96052268211209D6AA52 /* Cocoa.framework */; };
+		7184A459D84667AD2E859C2993409E09 /* GBSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 6589AC71A6297DC0959D1911D8FA7A18 /* GBSettings.m */; };
+		85D7B659A0FAFE12F37EB5DC8452C5A9 /* GBCli-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 77DEC91FC7B396447943CF2ED576005B /* GBCli-dummy.m */; };
+		8AA831A01CCF1326E5966BB68EBC2B88 /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 272643F56613CA0D336AE3DBF19DC404 /* Pods-dummy.m */; };
+		8E9946A5AE16B205EEE884F02A08C557 /* GBSettings.h in Headers */ = {isa = PBXBuildFile; fileRef = 43158DD6A3A27C7C19625181C74A1D1B /* GBSettings.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8F5FB561B3EF6D2232BF63F09A20C219 /* GBOptionsHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 123EEF85959ED07C9302947D5A501941 /* GBOptionsHelper.m */; };
+		92040F8F1719BEF808E55D64EC2E9911 /* GBPrint.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DE13A0CEA328116DFB3DCEA67CDDED8 /* GBPrint.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		98BD1BFFB8EC899C0FA7A013318130A0 /* GBPrint.m in Sources */ = {isa = PBXBuildFile; fileRef = EE14827F1459BC28523DFCA64045F594 /* GBPrint.m */; };
+		CD8AE559506B49AA3A92AE758E365096 /* GBCli.h in Headers */ = {isa = PBXBuildFile; fileRef = FAE60CCFF15B1BF764F45B752D3E364D /* GBCli.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F3654ABAE0E04DDFAD20D0416FA33B45 /* GBOptionsHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F4859CDD9979B2EE5C5D7C83836F352 /* GBOptionsHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F37DA214D03036B83C60D48A8CAF2768 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CA6EBC2E57D96052268211209D6AA52 /* Cocoa.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		A49E7BA7146047153207F815 /* PBXContainerItemProxy */ = {
+		CEDC23167D38B1B09BCE236896237124 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 3331D0F1803513AE28A90C89 /* Project object */;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = F150FD122368A67136FE44F9;
-			remoteInfo = "Pods-GBCli";
+			remoteGlobalIDString = 0131DC3EDEE65412C279FAEE4929EC22;
+			remoteInfo = GBCli;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		05BD7D1B92EA272AEFC8204E /* Pods-GBCli.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GBCli.xcconfig"; sourceTree = "<group>"; };
-		0F16919C55C9557035A990A0 /* GBPrint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GBPrint.m; path = GBCli/src/GBPrint.m; sourceTree = "<group>"; };
-		19027338E883306E3F161502 /* GBPrint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GBPrint.h; path = GBCli/src/GBPrint.h; sourceTree = "<group>"; };
-		19F4EC96BD940CD219245D35 /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
-		1A25C7B54B19E36B72557D7E /* GBCommandLineParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GBCommandLineParser.m; path = GBCli/src/GBCommandLineParser.m; sourceTree = "<group>"; };
-		4606F11A15F64E06B3BF60F3 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
-		488C5BC8736562F6A1CA68E7 /* GBOptionsHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GBOptionsHelper.m; path = GBCli/src/GBOptionsHelper.m; sourceTree = "<group>"; };
-		4C8DCB34C5C0E947D66AEEC1 /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
-		5CFAA0E5A7644E379E953289 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
-		5D9FF5AF895BC97B14E79CBE /* GBCommandLineParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GBCommandLineParser.h; path = GBCli/src/GBCommandLineParser.h; sourceTree = "<group>"; };
-		6540CBF7465959D48D8741AD /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
-		66800E6CB3FCDD52A8B1C442 /* GBSettings.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GBSettings.h; path = GBCli/src/GBSettings.h; sourceTree = "<group>"; };
-		680987F227333D6354A979C7 /* GBOptionsHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GBOptionsHelper.h; path = GBCli/src/GBOptionsHelper.h; sourceTree = "<group>"; };
-		80243A2175F82CCD1790CC72 /* GBSettings.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GBSettings.m; path = GBCli/src/GBSettings.m; sourceTree = "<group>"; };
-		91028DF5B8E1DB853A32EA46 /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
-		9D78ACDFB590CEB17C3A6899 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A01F2119C75948584416262A /* libPods-GBCli.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GBCli.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A4E5497C5DC4B30B8EACCE20 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		B4E56391E4B38DA7AC6F3D67 /* Pods-GBCli-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GBCli-prefix.pch"; sourceTree = "<group>"; };
-		BDA22E76CAAD1B5F309A1310 /* Pods-GBCli-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GBCli-Private.xcconfig"; sourceTree = "<group>"; };
-		C87882B1175A8ED859A0AB93 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
-		CC2FEB738ABEDA66B82F30E1 /* Pods-GBCli-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GBCli-dummy.m"; sourceTree = "<group>"; };
-		E04AC425992DB0DB68AD808C /* Pods-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-environment.h"; sourceTree = "<group>"; };
-		F36E121763423CCCAE0AB721 /* GBCli.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GBCli.h; path = GBCli/src/GBCli.h; sourceTree = "<group>"; };
+		0997AF5C5FE48DE99D8B0BEA59124130 /* GBCommandLineParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GBCommandLineParser.h; path = GBCli/src/GBCommandLineParser.h; sourceTree = "<group>"; };
+		10834806BD7B412BC24F347361FA2C8E /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
+		123EEF85959ED07C9302947D5A501941 /* GBOptionsHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GBOptionsHelper.m; path = GBCli/src/GBOptionsHelper.m; sourceTree = "<group>"; };
+		1CA6EBC2E57D96052268211209D6AA52 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		2678127996C0E4AE077F3297F9FC2D3E /* GBCommandLineParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GBCommandLineParser.m; path = GBCli/src/GBCommandLineParser.m; sourceTree = "<group>"; };
+		272643F56613CA0D336AE3DBF19DC404 /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
+		2DE13A0CEA328116DFB3DCEA67CDDED8 /* GBPrint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GBPrint.h; path = GBCli/src/GBPrint.h; sourceTree = "<group>"; };
+		37DB56D75062CC75FCB0966E1C6E8A8E /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
+		40679E5B29E83EFEFFF23B895CB661A7 /* GBCli.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GBCli.xcconfig; sourceTree = "<group>"; };
+		43158DD6A3A27C7C19625181C74A1D1B /* GBSettings.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GBSettings.h; path = GBCli/src/GBSettings.h; sourceTree = "<group>"; };
+		4E762F23EC34ED4A6FF3312D84E33A40 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
+		6589AC71A6297DC0959D1911D8FA7A18 /* GBSettings.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GBSettings.m; path = GBCli/src/GBSettings.m; sourceTree = "<group>"; };
+		6911BECA35E7518D864239B7E898EEF3 /* Pods-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-frameworks.sh"; sourceTree = "<group>"; };
+		6B11220E0EC0415053686A6A5FD737DB /* libGBCli.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGBCli.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		77DEC91FC7B396447943CF2ED576005B /* GBCli-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GBCli-dummy.m"; sourceTree = "<group>"; };
+		98C98CDFB3F20F2925F6CD1F141BB14F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
+		9E87E021D38418777D8F998AEC5066D7 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F4859CDD9979B2EE5C5D7C83836F352 /* GBOptionsHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GBOptionsHelper.h; path = GBCli/src/GBOptionsHelper.h; sourceTree = "<group>"; };
+		A1A36D34413696BE466E2CA0AFF194DA /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
+		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BCCB3330EF1F0A64F65DFA2A408BFD74 /* GBCli-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GBCli-prefix.pch"; sourceTree = "<group>"; };
+		EE14827F1459BC28523DFCA64045F594 /* GBPrint.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GBPrint.m; path = GBCli/src/GBPrint.m; sourceTree = "<group>"; };
+		FAE60CCFF15B1BF764F45B752D3E364D /* GBCli.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GBCli.h; path = GBCli/src/GBCli.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		D4890DB41A5DB81D02AC6C47 /* Frameworks */ = {
+		18F42A9C0266FDA4390402559A2F5437 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F2976271F11625F1FD432FA7 /* Cocoa.framework in Frameworks */,
+				F37DA214D03036B83C60D48A8CAF2768 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DDD6DC1E8AC2572B71149A3E /* Frameworks */ = {
+		E80BB96FD79E9ADF4B701BEA000F4C11 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3EFE56D03C563C1F92F53424 /* Cocoa.framework in Frameworks */,
+				5534B244492E0DD3AB9E1D8168EB5AE7 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		116F47CCFE6A065EAA1150E2 /* Targets Support Files */ = {
+		037C0CA694176A3C0915F62C9D20B3E6 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				822525D9B1C55938E1288306 /* Pods */,
+				B3D1D13E0C6553800746CB8FD61CF946 /* Pods */,
 			);
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		2D81096D7C3759E968B294D3 /* OS X */ = {
+		2304ECC81D3E8A8228A9F78C8E86F1A3 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				4606F11A15F64E06B3BF60F3 /* Cocoa.framework */,
+				40679E5B29E83EFEFFF23B895CB661A7 /* GBCli.xcconfig */,
+				77DEC91FC7B396447943CF2ED576005B /* GBCli-dummy.m */,
+				BCCB3330EF1F0A64F65DFA2A408BFD74 /* GBCli-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/GBCli";
+			sourceTree = "<group>";
+		};
+		28C17CEF104526ACA07B6EEE217EC43E /* OS X */ = {
+			isa = PBXGroup;
+			children = (
+				1CA6EBC2E57D96052268211209D6AA52 /* Cocoa.framework */,
 			);
 			name = "OS X";
 			sourceTree = "<group>";
 		};
-		7D9402C201358CD1F8396E4F = {
+		334D848DE63074BAF3CC1F5CDB2910CF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9D78ACDFB590CEB17C3A6899 /* Podfile */,
-				F632E0567F3C7C34522ADBAF /* Frameworks */,
-				96CFFA7DE6E5DDFDB7ED546A /* Pods */,
-				D7D42820006BA5F73DF86A42 /* Products */,
-				116F47CCFE6A065EAA1150E2 /* Targets Support Files */,
+				6B11220E0EC0415053686A6A5FD737DB /* libGBCli.a */,
+				9E87E021D38418777D8F998AEC5066D7 /* libPods.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		39E9EE8210D861DFD82346C1F5EB7218 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				28C17CEF104526ACA07B6EEE217EC43E /* OS X */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		54BB4B6DD3A0B199CF984CA5D5A566D2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				92DC4EEC13581A1F31460023023F8368 /* GBCli */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
+				39E9EE8210D861DFD82346C1F5EB7218 /* Frameworks */,
+				54BB4B6DD3A0B199CF984CA5D5A566D2 /* Pods */,
+				334D848DE63074BAF3CC1F5CDB2910CF /* Products */,
+				037C0CA694176A3C0915F62C9D20B3E6 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		822525D9B1C55938E1288306 /* Pods */ = {
+		92DC4EEC13581A1F31460023023F8368 /* GBCli */ = {
 			isa = PBXGroup;
 			children = (
-				4C8DCB34C5C0E947D66AEEC1 /* Pods-acknowledgements.markdown */,
-				19F4EC96BD940CD219245D35 /* Pods-acknowledgements.plist */,
-				6540CBF7465959D48D8741AD /* Pods-dummy.m */,
-				E04AC425992DB0DB68AD808C /* Pods-environment.h */,
-				91028DF5B8E1DB853A32EA46 /* Pods-resources.sh */,
-				5CFAA0E5A7644E379E953289 /* Pods.debug.xcconfig */,
-				C87882B1175A8ED859A0AB93 /* Pods.release.xcconfig */,
+				FAE60CCFF15B1BF764F45B752D3E364D /* GBCli.h */,
+				0997AF5C5FE48DE99D8B0BEA59124130 /* GBCommandLineParser.h */,
+				2678127996C0E4AE077F3297F9FC2D3E /* GBCommandLineParser.m */,
+				9F4859CDD9979B2EE5C5D7C83836F352 /* GBOptionsHelper.h */,
+				123EEF85959ED07C9302947D5A501941 /* GBOptionsHelper.m */,
+				2DE13A0CEA328116DFB3DCEA67CDDED8 /* GBPrint.h */,
+				EE14827F1459BC28523DFCA64045F594 /* GBPrint.m */,
+				43158DD6A3A27C7C19625181C74A1D1B /* GBSettings.h */,
+				6589AC71A6297DC0959D1911D8FA7A18 /* GBSettings.m */,
+				2304ECC81D3E8A8228A9F78C8E86F1A3 /* Support Files */,
+			);
+			path = GBCli;
+			sourceTree = "<group>";
+		};
+		B3D1D13E0C6553800746CB8FD61CF946 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				37DB56D75062CC75FCB0966E1C6E8A8E /* Pods-acknowledgements.markdown */,
+				10834806BD7B412BC24F347361FA2C8E /* Pods-acknowledgements.plist */,
+				272643F56613CA0D336AE3DBF19DC404 /* Pods-dummy.m */,
+				6911BECA35E7518D864239B7E898EEF3 /* Pods-frameworks.sh */,
+				A1A36D34413696BE466E2CA0AFF194DA /* Pods-resources.sh */,
+				4E762F23EC34ED4A6FF3312D84E33A40 /* Pods.debug.xcconfig */,
+				98C98CDFB3F20F2925F6CD1F141BB14F /* Pods.release.xcconfig */,
 			);
 			name = Pods;
 			path = "Target Support Files/Pods";
 			sourceTree = "<group>";
 		};
-		96CFFA7DE6E5DDFDB7ED546A /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				F1C43496C669D95E61119B1A /* GBCli */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		D7D42820006BA5F73DF86A42 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				A4E5497C5DC4B30B8EACCE20 /* libPods.a */,
-				A01F2119C75948584416262A /* libPods-GBCli.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		F1C43496C669D95E61119B1A /* GBCli */ = {
-			isa = PBXGroup;
-			children = (
-				F36E121763423CCCAE0AB721 /* GBCli.h */,
-				5D9FF5AF895BC97B14E79CBE /* GBCommandLineParser.h */,
-				1A25C7B54B19E36B72557D7E /* GBCommandLineParser.m */,
-				680987F227333D6354A979C7 /* GBOptionsHelper.h */,
-				488C5BC8736562F6A1CA68E7 /* GBOptionsHelper.m */,
-				19027338E883306E3F161502 /* GBPrint.h */,
-				0F16919C55C9557035A990A0 /* GBPrint.m */,
-				66800E6CB3FCDD52A8B1C442 /* GBSettings.h */,
-				80243A2175F82CCD1790CC72 /* GBSettings.m */,
-				FC0BB83C26642645525400D6 /* Support Files */,
-			);
-			path = GBCli;
-			sourceTree = "<group>";
-		};
-		F632E0567F3C7C34522ADBAF /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				2D81096D7C3759E968B294D3 /* OS X */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		FC0BB83C26642645525400D6 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				05BD7D1B92EA272AEFC8204E /* Pods-GBCli.xcconfig */,
-				BDA22E76CAAD1B5F309A1310 /* Pods-GBCli-Private.xcconfig */,
-				CC2FEB738ABEDA66B82F30E1 /* Pods-GBCli-dummy.m */,
-				B4E56391E4B38DA7AC6F3D67 /* Pods-GBCli-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Pods-GBCli";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		9CD0A4C43D7A7C16C51FD2DF /* Headers */ = {
+		C977C14A0D1D019F272C939CD332CF9B /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05914019B85269D63BBF6FEB /* GBCli.h in Headers */,
-				7965C0909CB05EB98DE879C3 /* GBCommandLineParser.h in Headers */,
-				B53632F012A2D125FFF8FF1D /* GBOptionsHelper.h in Headers */,
-				A12AA0B6EA655976FF0B14E6 /* GBPrint.h in Headers */,
-				76D0BC98741854E4E36DC2FF /* GBSettings.h in Headers */,
+				CD8AE559506B49AA3A92AE758E365096 /* GBCli.h in Headers */,
+				1FF70489F55F1CF71F25B7953C402E37 /* GBCommandLineParser.h in Headers */,
+				F3654ABAE0E04DDFAD20D0416FA33B45 /* GBOptionsHelper.h in Headers */,
+				92040F8F1719BEF808E55D64EC2E9911 /* GBPrint.h in Headers */,
+				8E9946A5AE16B205EEE884F02A08C557 /* GBSettings.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		B3E663CE38D0D20C5E80E67E /* Pods */ = {
+		0131DC3EDEE65412C279FAEE4929EC22 /* GBCli */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CAC230C1BF59B8BCB8AED635 /* Build configuration list for PBXNativeTarget "Pods" */;
+			buildConfigurationList = 92455F048D98FA4C0D38D601676833D8 /* Build configuration list for PBXNativeTarget "GBCli" */;
 			buildPhases = (
-				D8DFEA95FD8D7E1A31079560 /* Sources */,
-				D4890DB41A5DB81D02AC6C47 /* Frameworks */,
+				67C0CCF83244264B8E68445E061C7A91 /* Sources */,
+				E80BB96FD79E9ADF4B701BEA000F4C11 /* Frameworks */,
+				C977C14A0D1D019F272C939CD332CF9B /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				ED1A0C13555756986D4B464F /* PBXTargetDependency */,
+			);
+			name = GBCli;
+			productName = GBCli;
+			productReference = 6B11220E0EC0415053686A6A5FD737DB /* libGBCli.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		B3CB6DD8B6B870DD99132351F7AAFFE3 /* Pods */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EB0D2C95F7BA66820065EE76EE92F12D /* Build configuration list for PBXNativeTarget "Pods" */;
+			buildPhases = (
+				AE5FFC9E3CCD86E7B06291138EC5299B /* Sources */,
+				18F42A9C0266FDA4390402559A2F5437 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3ED20B99C5219D21A16F4ED1F498AAEB /* PBXTargetDependency */,
 			);
 			name = Pods;
 			productName = Pods;
-			productReference = A4E5497C5DC4B30B8EACCE20 /* libPods.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		F150FD122368A67136FE44F9 /* Pods-GBCli */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = EE342750B6FC7B8E18C96BD7 /* Build configuration list for PBXNativeTarget "Pods-GBCli" */;
-			buildPhases = (
-				9C82EB9231E9B2BDA97747DD /* Sources */,
-				DDD6DC1E8AC2572B71149A3E /* Frameworks */,
-				9CD0A4C43D7A7C16C51FD2DF /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Pods-GBCli";
-			productName = "Pods-GBCli";
-			productReference = A01F2119C75948584416262A /* libPods-GBCli.a */;
+			productReference = 9E87E021D38418777D8F998AEC5066D7 /* libPods.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		3331D0F1803513AE28A90C89 /* Project object */ = {
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0620;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
 			};
-			buildConfigurationList = 680AE8A7532F5ACA9DB982F2 /* Build configuration list for PBXProject "Pods" */;
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 7D9402C201358CD1F8396E4F;
-			productRefGroup = D7D42820006BA5F73DF86A42 /* Products */;
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 334D848DE63074BAF3CC1F5CDB2910CF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B3E663CE38D0D20C5E80E67E /* Pods */,
-				F150FD122368A67136FE44F9 /* Pods-GBCli */,
+				0131DC3EDEE65412C279FAEE4929EC22 /* GBCli */,
+				B3CB6DD8B6B870DD99132351F7AAFFE3 /* Pods */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		9C82EB9231E9B2BDA97747DD /* Sources */ = {
+		67C0CCF83244264B8E68445E061C7A91 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3CABCAFE9FF26B5ECA1539F6 /* GBCommandLineParser.m in Sources */,
-				6AC3FF010F33D6DC84EABF81 /* GBOptionsHelper.m in Sources */,
-				5612125423E2E1CBD5389AA7 /* GBPrint.m in Sources */,
-				B35CC18EE20EB4E4F823C95A /* GBSettings.m in Sources */,
-				3CD669257A648EAE7D21476F /* Pods-GBCli-dummy.m in Sources */,
+				85D7B659A0FAFE12F37EB5DC8452C5A9 /* GBCli-dummy.m in Sources */,
+				0A2942B7DCD5532F76BD9E235F45AD12 /* GBCommandLineParser.m in Sources */,
+				8F5FB561B3EF6D2232BF63F09A20C219 /* GBOptionsHelper.m in Sources */,
+				98BD1BFFB8EC899C0FA7A013318130A0 /* GBPrint.m in Sources */,
+				7184A459D84667AD2E859C2993409E09 /* GBSettings.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D8DFEA95FD8D7E1A31079560 /* Sources */ = {
+		AE5FFC9E3CCD86E7B06291138EC5299B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE5B155B8F6F3B6444697EDC /* Pods-dummy.m in Sources */,
+				8AA831A01CCF1326E5966BB68EBC2B88 /* Pods-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		ED1A0C13555756986D4B464F /* PBXTargetDependency */ = {
+		3ED20B99C5219D21A16F4ED1F498AAEB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = "Pods-GBCli";
-			target = F150FD122368A67136FE44F9 /* Pods-GBCli */;
-			targetProxy = A49E7BA7146047153207F815 /* PBXContainerItemProxy */;
+			name = GBCli;
+			target = 0131DC3EDEE65412C279FAEE4929EC22 /* GBCli */;
+			targetProxy = CEDC23167D38B1B09BCE236896237124 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		26147B28173C6D94A26F4274 /* Release */ = {
+		0987987BC6A3579954FDA41C1C842016 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C87882B1175A8ED859A0AB93 /* Pods.release.xcconfig */;
+			baseConfigurationReference = 40679E5B29E83EFEFFF23B895CB661A7 /* GBCli.xcconfig */;
 			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				EXECUTABLE_PREFIX = lib;
+				GCC_PREFIX_HEADER = "Target Support Files/GBCli/GBCli-prefix.pch";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
 			};
-			name = Release;
+			name = Debug;
 		};
-		6E41790A34EEDC307F71E4B1 /* Debug */ = {
+		1E621D6BF749EDCE77ACBE7C6D464E29 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -344,25 +342,7 @@
 			};
 			name = Debug;
 		};
-		889317070EB92E348C7A132B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5CFAA0E5A7644E379E953289 /* Pods.debug.xcconfig */;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				EXECUTABLE_PREFIX = lib;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		AC72C4FD7DDF932CAACFE941 /* Release */ = {
+		5577A3F22A37686E40DB6863D68D476C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -396,37 +376,58 @@
 			};
 			name = Release;
 		};
-		B037C78DDA4684438C1B8145 /* Debug */ = {
+		A530142EBADCD93C3F90340126946919 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BDA22E76CAAD1B5F309A1310 /* Pods-GBCli-Private.xcconfig */;
+			baseConfigurationReference = 98C98CDFB3F20F2925F6CD1F141BB14F /* Pods.release.xcconfig */;
 			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				EXECUTABLE_PREFIX = lib;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-GBCli/Pods-GBCli-prefix.pch";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-			};
-			name = Debug;
-		};
-		E25C4311225C107C6623191B /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = BDA22E76CAAD1B5F309A1310 /* Pods-GBCli-Private.xcconfig */;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				EXECUTABLE_PREFIX = lib;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-GBCli/Pods-GBCli-prefix.pch";
+				MACH_O_TYPE = staticlib;
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		CB4E94D14C3464E71212A6585687E25D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E762F23EC34ED4A6FF3312D84E33A40 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXECUTABLE_PREFIX = lib;
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		D610C19F4E4E01F6A56B078AB93A3DE9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 40679E5B29E83EFEFFF23B895CB661A7 /* GBCli.xcconfig */;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXECUTABLE_PREFIX = lib;
+				GCC_PREFIX_HEADER = "Target Support Files/GBCli/GBCli-prefix.pch";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -434,34 +435,34 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		680AE8A7532F5ACA9DB982F2 /* Build configuration list for PBXProject "Pods" */ = {
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6E41790A34EEDC307F71E4B1 /* Debug */,
-				AC72C4FD7DDF932CAACFE941 /* Release */,
+				1E621D6BF749EDCE77ACBE7C6D464E29 /* Debug */,
+				5577A3F22A37686E40DB6863D68D476C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CAC230C1BF59B8BCB8AED635 /* Build configuration list for PBXNativeTarget "Pods" */ = {
+		92455F048D98FA4C0D38D601676833D8 /* Build configuration list for PBXNativeTarget "GBCli" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				889317070EB92E348C7A132B /* Debug */,
-				26147B28173C6D94A26F4274 /* Release */,
+				0987987BC6A3579954FDA41C1C842016 /* Debug */,
+				D610C19F4E4E01F6A56B078AB93A3DE9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EE342750B6FC7B8E18C96BD7 /* Build configuration list for PBXNativeTarget "Pods-GBCli" */ = {
+		EB0D2C95F7BA66820065EE76EE92F12D /* Build configuration list for PBXNativeTarget "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B037C78DDA4684438C1B8145 /* Debug */,
-				E25C4311225C107C6623191B /* Release */,
+				CB4E94D14C3464E71212A6585687E25D /* Debug */,
+				A530142EBADCD93C3F90340126946919 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 3331D0F1803513AE28A90C89 /* Project object */;
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 }

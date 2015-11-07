@@ -1,8 +1,7 @@
-#import <Foundation/Foundation.h>
+@import Foundation;
 
-// Ideally we would only bridge a C function, but the compiler doesn't like that.
 @interface TargetDevice: NSObject
 
-+ (NSString *)deviceString;
++ (nonnull NSString *)deviceString;
 
 @end

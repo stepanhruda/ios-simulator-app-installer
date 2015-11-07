@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="8191" systemVersion="15B42" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="7531"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="8191"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="SimulatorSelectionWindowController" customModule="app_package_launcher" customModuleProvider="target">
@@ -22,6 +22,7 @@
                 <subviews>
                     <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="fJD-v0-ccs">
                         <rect key="frame" x="18" y="56" width="333" height="26"/>
+                        <animations/>
                         <popUpButtonCell key="cell" type="push" title="Simulator Selection" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" preferredEdge="maxY" selectedItem="SGd-ei-d85" id="iZG-iH-O9W">
                             <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="menu"/>
@@ -36,6 +37,7 @@
                     </popUpButton>
                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dBQ-Q1-Hv0">
                         <rect key="frame" x="244" y="7" width="110" height="32"/>
+                        <animations/>
                         <buttonCell key="cell" type="push" title="Launch" bezelStyle="rounded" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="38x-pa-WC6">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
@@ -49,6 +51,7 @@
                         <constraints>
                             <constraint firstAttribute="width" constant="98" id="OEE-zF-Xq3"/>
                         </constraints>
+                        <animations/>
                         <buttonCell key="cell" type="push" title="Cancel" bezelStyle="rounded" alignment="center" state="on" borderStyle="border" inset="2" id="K3B-o6-oOq">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
@@ -68,6 +71,7 @@
                     <constraint firstItem="fJD-v0-ccs" firstAttribute="top" secondItem="Bt3-hH-6IR" secondAttribute="top" constant="40" id="eSA-AQ-Eq9"/>
                     <constraint firstItem="fJD-v0-ccs" firstAttribute="centerX" secondItem="LSE-iH-SrZ" secondAttribute="centerX" constant="-4" id="spV-OA-mO2"/>
                 </constraints>
+                <animations/>
             </view>
             <point key="canvasLocation" x="190" y="365"/>
         </window>

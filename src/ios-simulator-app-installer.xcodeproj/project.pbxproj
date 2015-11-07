@@ -7,10 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C035BD911AD038CC002D05FB /* XcodeVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = C035BD901AD038CC002D05FB /* XcodeVersion.swift */; };
+		C035BD911AD038CC002D05FB /* Xcode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C035BD901AD038CC002D05FB /* Xcode.swift */; };
 		C04632391AC70B1A00026FF8 /* Arguments.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04632321AC70B1A00026FF8 /* Arguments.swift */; };
-		C046323A1AC70B1A00026FF8 /* FunctionalAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04632341AC70B1A00026FF8 /* FunctionalAdditions.swift */; };
-		C046323B1AC70B1A00026FF8 /* ListDevices.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04632351AC70B1A00026FF8 /* ListDevices.swift */; };
+		C046323B1AC70B1A00026FF8 /* Simulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04632351AC70B1A00026FF8 /* Simulator.swift */; };
 		C046323C1AC70B1A00026FF8 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04632361AC70B1A00026FF8 /* main.swift */; };
 		C046323D1AC70B1A00026FF8 /* Shell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04632371AC70B1A00026FF8 /* Shell.swift */; };
 		C046323E1AC70B1A00026FF8 /* StringToCChar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04632381AC70B1A00026FF8 /* StringToCChar.swift */; };
@@ -33,11 +32,10 @@
 /* Begin PBXFileReference section */
 		1542D4CCC50651202B413695 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		92E2D52A68C841EAC2D75E2C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		C035BD901AD038CC002D05FB /* XcodeVersion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XcodeVersion.swift; sourceTree = SOURCE_ROOT; };
+		C035BD901AD038CC002D05FB /* Xcode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Xcode.swift; sourceTree = SOURCE_ROOT; };
 		C04632321AC70B1A00026FF8 /* Arguments.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Arguments.swift; sourceTree = SOURCE_ROOT; };
 		C04632331AC70B1A00026FF8 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
-		C04632341AC70B1A00026FF8 /* FunctionalAdditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunctionalAdditions.swift; sourceTree = SOURCE_ROOT; };
-		C04632351AC70B1A00026FF8 /* ListDevices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListDevices.swift; sourceTree = SOURCE_ROOT; };
+		C04632351AC70B1A00026FF8 /* Simulator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Simulator.swift; sourceTree = SOURCE_ROOT; };
 		C04632361AC70B1A00026FF8 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = SOURCE_ROOT; };
 		C04632371AC70B1A00026FF8 /* Shell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shell.swift; sourceTree = SOURCE_ROOT; };
 		C04632381AC70B1A00026FF8 /* StringToCChar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringToCChar.swift; sourceTree = SOURCE_ROOT; };
@@ -96,14 +94,13 @@
 		C07EACC41AC6CD4200E5201D /* ios-simulator-app-installer */ = {
 			isa = PBXGroup;
 			children = (
-				C04632361AC70B1A00026FF8 /* main.swift */,
 				C04632321AC70B1A00026FF8 /* Arguments.swift */,
-				C04632341AC70B1A00026FF8 /* FunctionalAdditions.swift */,
-				C04632351AC70B1A00026FF8 /* ListDevices.swift */,
+				C04632361AC70B1A00026FF8 /* main.swift */,
 				C06E31461AC7104B00D4190D /* Packaging.swift */,
 				C04632371AC70B1A00026FF8 /* Shell.swift */,
+				C04632351AC70B1A00026FF8 /* Simulator.swift */,
 				C04632381AC70B1A00026FF8 /* StringToCChar.swift */,
-				C035BD901AD038CC002D05FB /* XcodeVersion.swift */,
+				C035BD901AD038CC002D05FB /* Xcode.swift */,
 				C04632331AC70B1A00026FF8 /* Bridging-Header.h */,
 			);
 			name = "ios-simulator-app-installer";
@@ -138,7 +135,9 @@
 		C07EACBA1AC6CD4200E5201D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0620;
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = ShopKeep;
 				TargetAttributes = {
 					C07EACC11AC6CD4200E5201D = {
@@ -202,12 +201,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C06E31471AC7104B00D4190D /* Packaging.swift in Sources */,
-				C046323A1AC70B1A00026FF8 /* FunctionalAdditions.swift in Sources */,
 				C046323E1AC70B1A00026FF8 /* StringToCChar.swift in Sources */,
-				C046323B1AC70B1A00026FF8 /* ListDevices.swift in Sources */,
+				C046323B1AC70B1A00026FF8 /* Simulator.swift in Sources */,
 				C046323D1AC70B1A00026FF8 /* Shell.swift in Sources */,
 				C046323C1AC70B1A00026FF8 /* main.swift in Sources */,
-				C035BD911AD038CC002D05FB /* XcodeVersion.swift in Sources */,
+				C035BD911AD038CC002D05FB /* Xcode.swift in Sources */,
 				C04632391AC70B1A00026FF8 /* Arguments.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -234,6 +232,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -248,7 +247,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -285,7 +284,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 				SWIFT_OBJC_BRIDGING_HEADER = "Bridging-Header.h";

@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Pods-GBCli.xcscheme</key>
+		<key>GBCli.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -17,12 +17,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>B3E663CE38D0D20C5E80E67E</key>
+		<key>0131DC3EDEE65412C279FAEE4929EC22</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F150FD122368A67136FE44F9</key>
+		<key>B3CB6DD8B6B870DD99132351F7AAFFE3</key>
 		<dict>
 			<key>primary</key>
 			<true/>

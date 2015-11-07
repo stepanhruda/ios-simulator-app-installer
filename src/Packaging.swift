@@ -1,86 +1,61 @@
-func packageApp(appPath: String, #deviceIdentifier: String?, #outputPath: String?, #packageLauncherPath: String?, #fileManager: NSFileManager) {
-    let sourcePath = appPath
-        |> getFullPath
-        >>= validateFileExistence(fileManager: fileManager)
-    
-    // TODO: Result<T,E> would be better for error handling.
-    switch (isRequiredXcodeIsInstalled(), sourcePath) {
-    case (false, _):
-        println("You need to have \(RequiredXcodeVersion) installed and selected via xcode-select.")
-    case (_, .None):
-        println("Provided .app not found at \(appPath)")
-    case (true, .Some(let sourcePath)):
-        
-        var targetPath: String
-        switch outputPath {
-        case .Some(let value): targetPath = value
-        case .None: targetPath = defaultTargetPathForApp(sourcePath)
-        }
-        
-        var launcherPath: String
-        switch packageLauncherPath {
-        case .Some(let value): launcherPath = value
-        case .None: launcherPath = "/usr/local/share/app-package-launcher"
-        }
-        
-        let productFolder = "\(launcherPath)/build"
-        let productPath = "\(productFolder)/Release/app-package-launcher.app"
-        let packagedAppFlag = "\"PACKAGED_APP=\(sourcePath)\""
-        let targetDeviceFlag = targetDeviceFlagForDeviceIdentifier(deviceIdentifier)
-        
-        let exitCode =
-        system("xcodebuild -project \(launcherPath)/app-package-launcher.xcodeproj \(packagedAppFlag) \(targetDeviceFlag) > /dev/null")
-        
-        switch exitCode {
+enum PackagingError: ErrorType {
+    case RequiredXcodeUnavailable(String)
+    case InvalidAppPath(String)
+    case XcodebuildFailed
+    case FileWriteFailed(NSError)
 
-        case 0:
-            println("\(appPath) successfully packaged to \(targetPath)")
-            fileManager.removeItemAtPath(targetPath, error: nil)
-            fileManager.moveItemAtPath(productPath, toPath: targetPath, error: nil)
-            fileManager.removeItemAtPath(productFolder, error: nil)
-            
-        default:
-            println("An error occurred when packaging \(appPath)")
-            
+    var message: String {
+        switch self {
+        case .RequiredXcodeUnavailable(let requiredVersion):
+            return "You need to have \(requiredVersion) installed and selected via xcode-select."
+        case .InvalidAppPath(let path):
+            return "Provided .app not found at \(path)"
+        case .XcodebuildFailed:
+            return "Error in xcodebuild when packaging app"
+        case .FileWriteFailed(let error):
+            return "Writing output bundle failed: \(error.localizedDescription)"
         }
-
-    default:
-        fatalError("How did we get here?")
     }
 }
 
-func getFullPath(path: String) -> String? {
-    return URL(path)?.path
-}
+class Packaging {
 
-func validateFileExistence(#fileManager: NSFileManager)(path: String) -> String? {
-    return fileManager.fileExistsAtPath(path) ? path : nil
-}
+    static func packageAppAtPath(
+        appPath: String,
+        deviceIdentifier: String?,
+        outputPath outputPathMaybe: String?,
+        packageLauncherPath: String? = "/usr/local/share/app-package-launcher",
+        fileManager: NSFileManager) throws {
 
-func lastPathComponent(#url: NSURL) -> String? {
-    return url.lastPathComponent
-}
+            guard Xcode.isRequiredVersionInstalled() else { throw PackagingError.RequiredXcodeUnavailable(Xcode.requiredVersion) }
+            guard fileManager.fileExistsAtPath(appPath) else { throw PackagingError.InvalidAppPath(appPath) }
 
-func URL(path: String) -> NSURL? {
-    return NSURL.fileURLWithPath(path)
-}
+            let outputPath = outputPathMaybe ?? defaultOutputPathForAppPath(appPath)
 
-func deletePathExtension(path: String) -> String? {
-    return path.stringByDeletingPathExtension
-}
+            let productFolder = "\(packageLauncherPath)/build"
+            let productPath = "\(productFolder)/Release/app-package-launcher.app"
+            let packagedAppFlag = "\"PACKAGED_APP=\(appPath)\""
+            let targetDeviceFlag = deviceIdentifier != nil ? "\"TARGET_DEVICE=\(deviceIdentifier!)\"" : ""
 
-func defaultTargetPathForApp(appPath: String) -> String {
-    let appName = appPath
-        |> URL
-        >>= lastPathComponent
-        >=> deletePathExtension
-    
-    return "\(appName!) Installer.app" // TODO: Wrap this in a type because the force unwrap is evil.
-}
+            let xcodebuildExitCode =
+            system("xcodebuild -project \(packageLauncherPath)/app-package-launcher.xcodeproj \(packagedAppFlag) \(targetDeviceFlag) > /dev/null")
+            guard xcodebuildExitCode == 0 else { throw PackagingError.XcodebuildFailed }
 
-func targetDeviceFlagForDeviceIdentifier(deviceIdentifier: String?) -> String {
-    switch deviceIdentifier {
-    case .Some(let deviceIdentifier): return "\"TARGET_DEVICE=\(deviceIdentifier)\""
-    case .None: return ""
+            do {
+                try fileManager.removeItemAtPath(outputPath)
+                try fileManager.moveItemAtPath(productPath, toPath: outputPath)
+                try fileManager.removeItemAtPath(productFolder)
+            } catch let error as NSError {
+                throw PackagingError.FileWriteFailed(error)
+            }
+
+            print("\(appPath) successfully packaged to \(outputPath)")
     }
+
+    static func defaultOutputPathForAppPath(appPath: String) -> String {
+        let url = NSURL(fileURLWithPath: appPath)
+        let appName = url.URLByDeletingPathExtension?.lastPathComponent ?? "App"
+        return "\(appName) Installer.app"
+    }
+
 }

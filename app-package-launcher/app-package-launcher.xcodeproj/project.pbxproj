@@ -18,8 +18,6 @@
 		C081698D1AC82A8A002F6BBE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C081698C1AC82A8A002F6BBE /* Foundation.framework */; };
 		C08169911AC82C70002F6BBE /* TargetDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = C08169901AC82C70002F6BBE /* TargetDevice.m */; };
 		C087D73C1ACCC972005441DF /* Shell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C087D73B1ACCC972005441DF /* Shell.swift */; };
-		C087D73E1ACCC9CE005441DF /* FunctionalAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C087D73D1ACCC9CE005441DF /* FunctionalAdditions.swift */; };
-		C087D7401ACCD462005441DF /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = C087D73F1ACCD462005441DF /* Errors.swift */; };
 		C0E31FEE1AC5A3340046EDA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E31FED1AC5A3340046EDA0 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
@@ -37,8 +35,6 @@
 		C081698C1AC82A8A002F6BBE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C08169901AC82C70002F6BBE /* TargetDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TargetDevice.m; sourceTree = "<group>"; };
 		C087D73B1ACCC972005441DF /* Shell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shell.swift; sourceTree = "<group>"; };
-		C087D73D1ACCC9CE005441DF /* FunctionalAdditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunctionalAdditions.swift; sourceTree = "<group>"; };
-		C087D73F1ACCD462005441DF /* Errors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		C0E31FE81AC5A3340046EDA0 /* app-package-launcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "app-package-launcher.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0E31FEC1AC5A3340046EDA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C0E31FED1AC5A3340046EDA0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -62,8 +58,6 @@
 				C00BFC061AC6451A00CE4F0B /* Packaged.app */,
 				C0E31FED1AC5A3340046EDA0 /* AppDelegate.swift */,
 				C035BD9A1AD09CBE002D05FB /* Installer.swift */,
-				C087D73F1ACCD462005441DF /* Errors.swift */,
-				C087D73D1ACCC9CE005441DF /* FunctionalAdditions.swift */,
 				C035BD9E1AD0A005002D05FB /* PackagedApp.swift */,
 				C035BD9C1AD09D07002D05FB /* Simulator.swift */,
 				C087D73B1ACCC972005441DF /* Shell.swift */,
@@ -116,7 +110,9 @@
 		C0E31FE01AC5A3340046EDA0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0620;
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = ShopKeep;
 				TargetAttributes = {
 					C0E31FE71AC5A3340046EDA0 = {
@@ -194,10 +190,8 @@
 				C035BD9B1AD09CBE002D05FB /* Installer.swift in Sources */,
 				C035BD9D1AD09D07002D05FB /* Simulator.swift in Sources */,
 				C035BD9F1AD0A005002D05FB /* PackagedApp.swift in Sources */,
-				C087D7401ACCD462005441DF /* Errors.swift in Sources */,
 				C035BD991AD06803002D05FB /* SimulatorSelectionViewController.swift in Sources */,
 				C08169911AC82C70002F6BBE /* TargetDevice.m in Sources */,
-				C087D73E1ACCC9CE005441DF /* FunctionalAdditions.swift in Sources */,
 				C0E31FEE1AC5A3340046EDA0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -235,6 +229,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -300,6 +295,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = "TARGET_DEVICE=\"${TARGET_DEVICE}\"";
 				INFOPLIST_FILE = Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.shopkeep.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -314,6 +310,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = "TARGET_DEVICE=\"${TARGET_DEVICE}\"";
 				INFOPLIST_FILE = Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.shopkeep.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
