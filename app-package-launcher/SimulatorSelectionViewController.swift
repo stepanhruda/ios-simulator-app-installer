@@ -16,7 +16,7 @@ class SimulatorSelectionWindowController: NSWindowController {
     }
     
     override func windowDidLoad() {
-        let titles = simulators.map { $0.identifierString }
+        let titles = simulators.map { $0.name }
         
         selectionPopUpButton.removeAllItems()
         selectionPopUpButton.menu = NSMenu(title: "Simulators")

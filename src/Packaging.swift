@@ -24,17 +24,19 @@ class Packaging {
         appPath: String,
         deviceIdentifier: String?,
         outputPath outputPathMaybe: String?,
-        packageLauncherPath: String? = "/usr/local/share/app-package-launcher",
+        packageLauncherPath packageLauncherPathMaybe: String?,
         fileManager: NSFileManager) throws {
+            let packageLauncherPath = packageLauncherPathMaybe ?? "/usr/local/share/app-package-launcher"
 
             guard Xcode.isRequiredVersionInstalled() else { throw PackagingError.RequiredXcodeUnavailable(Xcode.requiredVersion) }
             guard fileManager.fileExistsAtPath(appPath) else { throw PackagingError.InvalidAppPath(appPath) }
+            let fullAppPath = NSURL(fileURLWithPath: appPath).path!
 
             let outputPath = outputPathMaybe ?? defaultOutputPathForAppPath(appPath)
 
             let productFolder = "\(packageLauncherPath)/build"
             let productPath = "\(productFolder)/Release/app-package-launcher.app"
-            let packagedAppFlag = "\"PACKAGED_APP=\(appPath)\""
+            let packagedAppFlag = "\"PACKAGED_APP=\(fullAppPath)\""
             let targetDeviceFlag = deviceIdentifier != nil ? "\"TARGET_DEVICE=\(deviceIdentifier!)\"" : ""
 
             let xcodebuildExitCode =
@@ -42,7 +44,9 @@ class Packaging {
             guard xcodebuildExitCode == 0 else { throw PackagingError.XcodebuildFailed }
 
             do {
-                try fileManager.removeItemAtPath(outputPath)
+                if fileManager.fileExistsAtPath(outputPath) {
+                    try fileManager.removeItemAtPath(outputPath)
+                }
                 try fileManager.moveItemAtPath(productPath, toPath: outputPath)
                 try fileManager.removeItemAtPath(productFolder)
             } catch let error as NSError {

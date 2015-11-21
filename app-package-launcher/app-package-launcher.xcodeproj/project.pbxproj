@@ -164,7 +164,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [ -d \"${PACKAGED_APP}\" ]; then\n    echo \"Copying specified ${PACKAGED_APP}.\"\n    cp -r \"${PACKAGED_APP}\" \"${SRCROOT}/Packaged.app\"\nelif [ -d \"${SRCROOT}/Packaged.app\" ]; then\n    echo \"Using Packaged.app present in the source root.\"\nelse\n    echo \"Specify packaged app through PACKAGED_APP.\"\n    exit 10\nfi\n";
+			shellScript = "echo \"${PACKAGED_APP}\"\n\nif [ -d \"${PACKAGED_APP}\" ]; then\n    echo \"Copying specified ${PACKAGED_APP}.\"\n    cp -r \"${PACKAGED_APP}\" \"${SRCROOT}/Packaged.app\"\nelif [ -d \"${SRCROOT}/Packaged.app\" ]; then\n    echo \"Using Packaged.app present in the source root.\"\nelse\n    echo \"Specify packaged app through PACKAGED_APP.\"\n    exit 10\nfi\n";
 		};
 		C00BFC091AC6469000CE4F0B /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;

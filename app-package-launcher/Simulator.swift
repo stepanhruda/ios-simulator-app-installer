@@ -1,10 +1,10 @@
 struct Simulator {
     let identifierString: String
+    var name: String { return identifierString.truncateUuid() }
 
     static func allSimulators() -> [Simulator] {
         return Shell.run("xcrun instruments -s")
             .filterSimulators()
-            .map { $0.truncateUuid() }
             .sort { $0 > $1 }
             .map { Simulator(identifierString: $0) }
     }
