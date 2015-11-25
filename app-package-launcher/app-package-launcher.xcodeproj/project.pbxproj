@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C00BFC071AC6451A00CE4F0B /* Packaged.app in Resources */ = {isa = PBXBuildFile; fileRef = C00BFC061AC6451A00CE4F0B /* Packaged.app */; };
+		88C163F31C065F200011C740 /* Uninstall.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C163F21C065F200011C740 /* Uninstall.m */; };
+		88C163F71C0660AB0011C740 /* Packaged.app in Resources */ = {isa = PBXBuildFile; fileRef = 88C163F61C0660AB0011C740 /* Packaged.app */; };
 		C035BD971AD064B5002D05FB /* SimulatorSelection.xib in Resources */ = {isa = PBXBuildFile; fileRef = C035BD961AD064B5002D05FB /* SimulatorSelection.xib */; };
 		C035BD991AD06803002D05FB /* SimulatorSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C035BD981AD06803002D05FB /* SimulatorSelectionViewController.swift */; };
 		C035BD9B1AD09CBE002D05FB /* Installer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C035BD9A1AD09CBE002D05FB /* Installer.swift */; };
@@ -22,7 +23,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C00BFC061AC6451A00CE4F0B /* Packaged.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; path = Packaged.app; sourceTree = "<group>"; };
+		88C163F11C065F200011C740 /* Uninstall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Uninstall.h; sourceTree = "<group>"; };
+		88C163F21C065F200011C740 /* Uninstall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Uninstall.m; sourceTree = "<group>"; };
+		88C163F61C0660AB0011C740 /* Packaged.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; path = Packaged.app; sourceTree = "<group>"; };
 		C035BD961AD064B5002D05FB /* SimulatorSelection.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SimulatorSelection.xib; sourceTree = "<group>"; };
 		C035BD981AD06803002D05FB /* SimulatorSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimulatorSelectionViewController.swift; sourceTree = "<group>"; };
 		C035BD9A1AD09CBE002D05FB /* Installer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Installer.swift; sourceTree = "<group>"; };
@@ -55,7 +58,7 @@
 		C0E31FDF1AC5A3340046EDA0 = {
 			isa = PBXGroup;
 			children = (
-				C00BFC061AC6451A00CE4F0B /* Packaged.app */,
+				88C163F61C0660AB0011C740 /* Packaged.app */,
 				C0E31FED1AC5A3340046EDA0 /* AppDelegate.swift */,
 				C035BD9A1AD09CBE002D05FB /* Installer.swift */,
 				C035BD9E1AD0A005002D05FB /* PackagedApp.swift */,
@@ -65,6 +68,8 @@
 				C081698B1AC829FB002F6BBE /* Bridging-Header.h */,
 				C07A81EC1AC827DD009C1EB6 /* TargetDevice.h */,
 				C08169901AC82C70002F6BBE /* TargetDevice.m */,
+				88C163F11C065F200011C740 /* Uninstall.h */,
+				88C163F21C065F200011C740 /* Uninstall.m */,
 				C0E31FEC1AC5A3340046EDA0 /* Info.plist */,
 				C06E31481AC72F3D00D4190D /* Images.xcassets */,
 				C046322E1AC70A5800026FF8 /* MainMenu.xib */,
@@ -146,7 +151,7 @@
 				C06E31491AC72F3D00D4190D /* Images.xcassets in Resources */,
 				C035BD971AD064B5002D05FB /* SimulatorSelection.xib in Resources */,
 				C04632311AC70A6000026FF8 /* MainMenu.xib in Resources */,
-				C00BFC071AC6451A00CE4F0B /* Packaged.app in Resources */,
+				88C163F71C0660AB0011C740 /* Packaged.app in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,6 +191,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88C163F31C065F200011C740 /* Uninstall.m in Sources */,
 				C087D73C1ACCC972005441DF /* Shell.swift in Sources */,
 				C035BD9B1AD09CBE002D05FB /* Installer.swift in Sources */,
 				C035BD9D1AD09D07002D05FB /* Simulator.swift in Sources */,
