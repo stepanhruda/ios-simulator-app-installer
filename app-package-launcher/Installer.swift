@@ -9,6 +9,7 @@ class Installer {
 
             system("xcrun instruments -w \"\(simulator.identifierString)\"")
 
+            system("xcrun simctl uninstall booted \(packagedApp.bundleIdentifier)")
             system("xcrun simctl install booted \"\(packagedApp.bundlePath)\"")
             system("xcrun simctl launch booted \(packagedApp.bundleIdentifier)")
 
