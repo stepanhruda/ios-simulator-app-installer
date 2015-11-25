@@ -1,6 +1,6 @@
 class IosSimulatorAppInstaller < Formula
   homepage "https://github.com/stepanhruda/ios-simulator-app-installer"
-  url "https://github.com/siong1987/ios-simulator-app-installer.git",
+  url "https://github.com/stepanhruda/ios-simulator-app-installer.git",
     :revision => "532a8ed86388e5080fcadf176ba55a0f9fc2d237"
   version "0.2.0"
 
