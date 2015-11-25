@@ -3,7 +3,7 @@
 @implementation Uninstall
 
 + (BOOL)should {
-#ifdef UNINSTALL
+#if UNINSTALL == 1
     return YES;
 #endif
     
