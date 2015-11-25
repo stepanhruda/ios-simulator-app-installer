@@ -25,6 +25,7 @@ class Packaging {
         deviceIdentifier: String?,
         outputPath outputPathMaybe: String?,
         packageLauncherPath packageLauncherPathMaybe: String?,
+        shouldReinstall: Bool=false,
         fileManager: NSFileManager) throws {
             let packageLauncherPath = packageLauncherPathMaybe ?? "/usr/local/share/app-package-launcher"
 
@@ -38,9 +39,10 @@ class Packaging {
             let productPath = "\(productFolder)/Release/app-package-launcher.app"
             let packagedAppFlag = "\"PACKAGED_APP=\(fullAppPath)\""
             let targetDeviceFlag = deviceIdentifier != nil ? "\"TARGET_DEVICE=\(deviceIdentifier!)\"" : ""
+            let reinstallFlag = shouldReinstall ? "\"UNINSTALL=1\"" : "\"UNINSTALL=0\""
 
             let xcodebuildExitCode =
-            system("xcodebuild -project \(packageLauncherPath)/app-package-launcher.xcodeproj \(packagedAppFlag) \(targetDeviceFlag) > /dev/null")
+            system("xcodebuild -project \(packageLauncherPath)/app-package-launcher.xcodeproj \(packagedAppFlag) \(targetDeviceFlag) \(reinstallFlag) > /dev/null")
             guard xcodebuildExitCode == 0 else { throw PackagingError.XcodebuildFailed }
 
             do {

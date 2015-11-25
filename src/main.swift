@@ -16,7 +16,9 @@ if arguments.displayHelp {
             deviceIdentifier: arguments.deviceIdentifier,
             outputPath: arguments.outputPath,
             packageLauncherPath: arguments.packageLauncherPath,
-            fileManager: NSFileManager.defaultManager())
+            shouldReinstall: arguments.shouldReinstallApp,
+            fileManager: NSFileManager.defaultManager()
+        )
     } catch let error as PackagingError {
         print(error.message)
     }
