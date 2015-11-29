@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		88C163F31C065F200011C740 /* Uninstall.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C163F21C065F200011C740 /* Uninstall.m */; };
 		88C163F71C0660AB0011C740 /* Packaged.app in Resources */ = {isa = PBXBuildFile; fileRef = 88C163F61C0660AB0011C740 /* Packaged.app */; };
 		C035BD971AD064B5002D05FB /* SimulatorSelection.xib in Resources */ = {isa = PBXBuildFile; fileRef = C035BD961AD064B5002D05FB /* SimulatorSelection.xib */; };
 		C035BD991AD06803002D05FB /* SimulatorSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C035BD981AD06803002D05FB /* SimulatorSelectionViewController.swift */; };
@@ -17,14 +16,12 @@
 		C04632311AC70A6000026FF8 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = C046322E1AC70A5800026FF8 /* MainMenu.xib */; };
 		C06E31491AC72F3D00D4190D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C06E31481AC72F3D00D4190D /* Images.xcassets */; };
 		C081698D1AC82A8A002F6BBE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C081698C1AC82A8A002F6BBE /* Foundation.framework */; };
-		C08169911AC82C70002F6BBE /* TargetDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = C08169901AC82C70002F6BBE /* TargetDevice.m */; };
+		C08169911AC82C70002F6BBE /* Parameters.m in Sources */ = {isa = PBXBuildFile; fileRef = C08169901AC82C70002F6BBE /* Parameters.m */; };
 		C087D73C1ACCC972005441DF /* Shell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C087D73B1ACCC972005441DF /* Shell.swift */; };
 		C0E31FEE1AC5A3340046EDA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E31FED1AC5A3340046EDA0 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		88C163F11C065F200011C740 /* Uninstall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Uninstall.h; sourceTree = "<group>"; };
-		88C163F21C065F200011C740 /* Uninstall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Uninstall.m; sourceTree = "<group>"; };
 		88C163F61C0660AB0011C740 /* Packaged.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; path = Packaged.app; sourceTree = "<group>"; };
 		C035BD961AD064B5002D05FB /* SimulatorSelection.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SimulatorSelection.xib; sourceTree = "<group>"; };
 		C035BD981AD06803002D05FB /* SimulatorSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimulatorSelectionViewController.swift; sourceTree = "<group>"; };
@@ -33,10 +30,10 @@
 		C035BD9E1AD0A005002D05FB /* PackagedApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PackagedApp.swift; sourceTree = "<group>"; };
 		C046322F1AC70A5800026FF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		C06E31481AC72F3D00D4190D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		C07A81EC1AC827DD009C1EB6 /* TargetDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TargetDevice.h; sourceTree = "<group>"; };
+		C07A81EC1AC827DD009C1EB6 /* Parameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Parameters.h; sourceTree = "<group>"; };
 		C081698B1AC829FB002F6BBE /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		C081698C1AC82A8A002F6BBE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		C08169901AC82C70002F6BBE /* TargetDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TargetDevice.m; sourceTree = "<group>"; };
+		C08169901AC82C70002F6BBE /* Parameters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Parameters.m; sourceTree = "<group>"; };
 		C087D73B1ACCC972005441DF /* Shell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shell.swift; sourceTree = "<group>"; };
 		C0E31FE81AC5A3340046EDA0 /* app-package-launcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "app-package-launcher.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0E31FEC1AC5A3340046EDA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -66,10 +63,8 @@
 				C087D73B1ACCC972005441DF /* Shell.swift */,
 				C035BD981AD06803002D05FB /* SimulatorSelectionViewController.swift */,
 				C081698B1AC829FB002F6BBE /* Bridging-Header.h */,
-				C07A81EC1AC827DD009C1EB6 /* TargetDevice.h */,
-				C08169901AC82C70002F6BBE /* TargetDevice.m */,
-				88C163F11C065F200011C740 /* Uninstall.h */,
-				88C163F21C065F200011C740 /* Uninstall.m */,
+				C07A81EC1AC827DD009C1EB6 /* Parameters.h */,
+				C08169901AC82C70002F6BBE /* Parameters.m */,
 				C0E31FEC1AC5A3340046EDA0 /* Info.plist */,
 				C06E31481AC72F3D00D4190D /* Images.xcassets */,
 				C046322E1AC70A5800026FF8 /* MainMenu.xib */,
@@ -191,13 +186,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				88C163F31C065F200011C740 /* Uninstall.m in Sources */,
 				C087D73C1ACCC972005441DF /* Shell.swift in Sources */,
 				C035BD9B1AD09CBE002D05FB /* Installer.swift in Sources */,
 				C035BD9D1AD09D07002D05FB /* Simulator.swift in Sources */,
 				C035BD9F1AD0A005002D05FB /* PackagedApp.swift in Sources */,
 				C035BD991AD06803002D05FB /* SimulatorSelectionViewController.swift in Sources */,
-				C08169911AC82C70002F6BBE /* TargetDevice.m in Sources */,
+				C08169911AC82C70002F6BBE /* Parameters.m in Sources */,
 				C0E31FEE1AC5A3340046EDA0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,7 +296,6 @@
 					"TARGET_DEVICE=\"${TARGET_DEVICE}\"",
 					"UNINSTALL=\"${UNINSTALL}\"",
 				);
-				"GCC_PREPROCESSOR_DEFINITIONS[arch=*]" = "TARGET_DEVICE=\"${TARGET_DEVICE}\"";
 				INFOPLIST_FILE = Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.shopkeep.$(PRODUCT_NAME:rfc1034identifier)";

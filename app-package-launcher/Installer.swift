@@ -9,7 +9,7 @@ class Installer {
 
             system("xcrun instruments -w \"\(simulator.identifierString)\"")
 
-            if Uninstall.should() {
+            if Parameters.shouldUninstallFirst() {
                 system("xcrun simctl uninstall booted \(packagedApp.bundleIdentifier)")
             }
 

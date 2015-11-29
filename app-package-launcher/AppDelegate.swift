@@ -8,7 +8,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         do {
             let packagedApp = try PackagedApp(bundleName: "Packaged")
 
-            let simulatorIdentifierProvidedOnCompileTime = TargetDevice.deviceString()
+            let simulatorIdentifierProvidedOnCompileTime = Parameters.deviceString()
             let simulators = Simulator.simulatorsMatchingIdentifier(simulatorIdentifierProvidedOnCompileTime)
 
             switch simulators.count {

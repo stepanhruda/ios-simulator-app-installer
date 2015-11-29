@@ -1,2 +1,1 @@
-#import "TargetDevice.h"
-#import "Uninstall.h"
+#import "Parameters.h"

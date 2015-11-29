@@ -45,9 +45,9 @@ If multiple devices match your string, the user will be prompted to select one.
 
 <img src="https://cloud.githubusercontent.com/assets/2835783/7115847/316417a8-e1ba-11e4-9c17-b632583cf404.png" width="472" height="233">
 
-* `--reinstall`
+* `--fresh-install`
 
-Reinstalls the app every time when the user launches the app in the simulator. This is helpful if you want to make sure that a clean(clear NSUserDefault for example) app is launched.
+A fresh install of the app on every installer launch. This is helpful if you want to blow away the local storage or e.g. clean NSUserDefaults on every launch.
 
 * `--out`
 
