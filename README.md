@@ -21,7 +21,7 @@ brew tap stepanhruda/ios-simulator-app-installer https://github.com/stepanhruda/
 brew install ios-simulator-app-installer
 ```
 
-Latest stable version of Xcode and OS X Yosemite are required.
+Latest stable version of Xcode and OS X El Capitan are required.
 
 ## Usage
 
