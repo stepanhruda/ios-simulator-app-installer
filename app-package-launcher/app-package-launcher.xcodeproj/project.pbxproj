@@ -294,7 +294,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"TARGET_DEVICE=\"${TARGET_DEVICE}\"",
-					"UNINSTALL=\"${UNINSTALL}\"",
+					"UNINSTALL=0${UNINSTALL}",
 				);
 				INFOPLIST_FILE = Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
@@ -312,7 +312,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"TARGET_DEVICE=\"${TARGET_DEVICE}\"",
-					"UNINSTALL=\"${UNINSTALL}\"",
+					"UNINSTALL=0${UNINSTALL}",
 				);
 				INFOPLIST_FILE = Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";

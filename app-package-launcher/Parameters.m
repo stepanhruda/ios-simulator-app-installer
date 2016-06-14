@@ -10,7 +10,7 @@
 }
 
 + (BOOL)shouldUninstallFirst {
-#if UNINSTALL == 1
+#if UNINSTALL == 01
     return YES;
 #else
     return NO;
