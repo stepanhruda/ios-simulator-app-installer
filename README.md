@@ -17,8 +17,7 @@ When you open it, it launches iOS Simulator and installs the packaged iOS app.
 _ios-simulator-app-installer_ is distributed via [Homebrew](http://brew.sh).
 
 ```
-brew tap stepanhruda/ios-simulator-app-installer https://github.com/stepanhruda/ios-simulator-app-installer
-brew install ios-simulator-app-installer
+brew install stepanhruda/tap/ios-simulator-app-installer
 ```
 
 Latest stable version of Xcode and OS X El Capitan are required.
